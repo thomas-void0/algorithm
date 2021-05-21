@@ -7,4 +7,4 @@ My algorithm learning path
 ## sort
 
 1. [《bubble-sort》](https://github.com/lmxyjy/algorithm/blob/main/bubble-sort/index.ts)
-1. [《selection-sort》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
+2. [《selection-sort》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
