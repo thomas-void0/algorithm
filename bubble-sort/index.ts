@@ -9,17 +9,22 @@
  */
 function bubbleSort(list: number[]): number[] {
   const len = list.length;
-  for (let i = len - 1; i >= 0; i--) {
-    console.log("i:", i);
-    const prevValue = list[i - 1];
-    const currentValue = list[i];
-    console.log("prevValue", prevValue);
-    console.log("currentValue", currentValue);
-    if (prevValue !== void 0 && currentValue < prevValue) {
-      list[i - 1] = currentValue;
-      list[i] = prevValue;
+  let i = len - 1;
+  let times = 0;
+  while (i > 0) {
+    for (let j = len - 1; j > times; j--) {
+      const prevValue = list[j - 1];
+      const currentValue = list[j];
+
+      if (prevValue !== undefined && prevValue > currentValue) {
+        list[j - 1] = currentValue;
+        list[j] = prevValue;
+      }
     }
+    i--;
+    times++;
   }
+
   return list;
 }
 bubbleSort([5, 6, 3, 11, 1, 0, 9]);

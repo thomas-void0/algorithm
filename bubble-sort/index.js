@@ -10,16 +10,19 @@
  */
 function bubbleSort(list) {
     var len = list.length;
-    for (var i = len - 1; i >= 0; i--) {
-        console.log("i:", i);
-        var prevValue = list[i - 1];
-        var currentValue = list[i];
-        console.log("prevValue", prevValue);
-        console.log("currentValue", currentValue);
-        if (prevValue !== void 0 && currentValue < prevValue) {
-            list[i - 1] = currentValue;
-            list[i] = prevValue;
+    var i = len - 1;
+    var times = 0;
+    while (i > 0) {
+        for (var j = len - 1; j > times; j--) {
+            var prevValue = list[j - 1];
+            var currentValue = list[j];
+            if (prevValue !== undefined && prevValue > currentValue) {
+                list[j - 1] = currentValue;
+                list[j] = prevValue;
+            }
         }
+        i--;
+        times++;
     }
     return list;
 }
