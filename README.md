@@ -8,3 +8,4 @@ My algorithm learning path
 
 1. [《bubble-sort》](https://github.com/lmxyjy/algorithm/blob/main/bubble-sort/index.ts)
 2. [《selection-sort》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
+2. [《insertion-sort》](https://github.com/lmxyjy/algorithm/blob/main/insertion-sort/index.ts)
