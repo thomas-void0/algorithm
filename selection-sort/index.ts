@@ -10,19 +10,23 @@
 function selectionSort(list: number[]): number[]{
     let i = 0
     const len = list.length
-    while (i < list.length - 1) {
+    while (i < len - 1) {
+
         let idx = i //最小值的索引值
         let x = list[i] //最小值的值
-        for (let j = i; j < len - 1; j++){
+
+        for (let j = i + 1; j <= len - 1; j++){
             if (x > list[j]) {
                 x = list[j]
                 idx = j
             }
         }
+
         //换位置,将找到的最小值的位置替换为当前参与查找的值
         list[idx] = list[i]
         //将当前参与查找的值替换为最小值
         list[i] = x
+
         i++
     }
     return list

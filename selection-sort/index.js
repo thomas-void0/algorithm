@@ -11,10 +11,10 @@
 function selectionSort(list) {
     var i = 0;
     var len = list.length;
-    while (i < list.length - 1) {
+    while (i < len - 1) {
         var idx = i; //最小值的索引值
         var x = list[i]; //最小值的值
-        for (var j = i; j < len - 1; j++) {
+        for (var j = i + 1; j <= len - 1; j++) {
             if (x > list[j]) {
                 x = list[j];
                 idx = j;
