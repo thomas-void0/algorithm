@@ -40,6 +40,7 @@ function createMaxHeap(arr, length) {
     }
     return arr;
 }
+console.log("大顶堆:", createMaxHeap([5, 6, 3, 11, 1, 0, 9], 7));
 //小顶堆
 // 从第一个非叶子节点开始依次对数组中的元素进行下沉操作
 // 和孩子节点的最小值min比较
@@ -56,7 +57,7 @@ function ajustMinHeap(array, index, length) {
         }
         else {
             _a = [array[i], array[index]], array[index] = _a[0], array[i] = _a[1];
-            index = i;
+            index = i; //较大的值参加下一轮的对比
         }
     }
 }
@@ -66,3 +67,4 @@ function createMinHeap(arr, length) {
     }
     return arr;
 }
+console.log("小顶堆:", createMinHeap([5, 6, 3, 11, 1, 0, 9], 7));
