@@ -9,18 +9,18 @@
 // 和孩子节点的最大值max比较
 // 大于max — 不需要在下沉
 // 小于max — 和max交换位置 - 继续和下一层孩子节点比较，直到队列末尾
-
 function ajustMaxHeap(array:number[], index:number, length:number) {
     for (let i = 2 * index + 1; i < length; i = 2 * i + 1) {
       if (i + 1 < length && array[i + 1] > array[i]) {
         i++;
       }
-        //比假设的最大值大，那么就保持这个数字的位置不变
-        if (array[index] >= array[i]) {
+      //比假设的最大值大，那么就保持这个数字的位置不变
+      if (array[index] >= array[i]) {
         break;
-        } else {
-          //比假设的最大值array[i]小，那么说明这个数字在下面，交换他们的位置
+      } else {
+        //比假设的最大值array[i]小，那么说明这个数字在下面，交换他们的位置
         [array[index], array[i]] = [array[i], array[index]];
+        //设置当前的index为i,如果比最大值大的值换位置后。那么就将换了位置后的前最大值进行下一轮对比
         index = i;
       }
     }
@@ -37,7 +37,6 @@ function createMaxHeap(arr:number[], length:number) {
   }
   return arr;
 }
-//[5,6,3,11,1,0,9]
 
 console.log("huuhuh",createMaxHeap([5,6,3,11,1,0,9],7))
-//
+

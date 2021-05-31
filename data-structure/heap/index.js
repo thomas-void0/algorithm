@@ -23,6 +23,7 @@ function ajustMaxHeap(array, index, length) {
         else {
             //比假设的最大值array[i]小，那么说明这个数字在下面，交换他们的位置
             _a = [array[i], array[index]], array[index] = _a[0], array[i] = _a[1];
+            //设置当前的index为i,如果比最大值大的值换位置后。那么就将换了位置后的前最大值进行下一轮对比
             index = i;
         }
     }
@@ -39,6 +40,4 @@ function createMaxHeap(arr, length) {
     }
     return arr;
 }
-//[5,6,3,11,1,0,9]
 console.log("huuhuh", createMaxHeap([5, 6, 3, 11, 1, 0, 9], 7));
-//
