@@ -4,34 +4,40 @@
  * 最小堆特点：子结点均大于父节点
  * 最大堆特点：子节点均小于父节点 
  */
-
 //1，大顶堆：从第一个非叶子节点开始依次对数组中的元素进行下沉操作
 // 大顶堆的特点：父节点大于子结点
 // 和孩子节点的最大值max比较
 // 大于max — 不需要在下沉
 // 小于max — 和max交换位置 - 继续和下一层孩子节点比较，直到队列末尾
 
-function ajustMaxHeap(array:any[], index:number) {
-    for (let i = 2 * index + 1; i < array.length; i = 2 * i + 1) {
-      if (i + 1 < array.length && array[i + 1] > array[i]) {
+function ajustMaxHeap(array:number[], index:number, length:number) {
+    for (let i = 2 * index + 1; i < length; i = 2 * i + 1) {
+      if (i + 1 < length && array[i + 1] > array[i]) {
         i++;
       }
-      if (array[index] >= [array[i]]) {
+        //比假设的最大值大，那么就保持这个数字的位置不变
+        if (array[index] >= array[i]) {
         break;
-      } else {
+        } else {
+          //比假设的最大值array[i]小，那么说明这个数字在下面，交换他们的位置
         [array[index], array[i]] = [array[i], array[index]];
         index = i;
       }
     }
 }
-
-function createMaxHeap(arr: any[]) {
-    const len = arr.length
-    //从中间挑选一个数字,作为开始进行创建
-    for (let i = Math.floor(len / 2) - 1; i >= 0; i--) {
-      ajustMaxHeap(arr, i);
-    }
-    return arr;
+/**
+ * 创建一个大顶堆
+ * @param arr 
+ * @param length 要进行堆创建的数组数字长度
+ * @returns 
+ */
+function createMaxHeap(arr:number[], length:number) {
+  for (let i = Math.floor(length / 2) - 1; i >= 0; i--) {
+    ajustMaxHeap(arr, i, length);
   }
+  return arr;
+}
+//[5,6,3,11,1,0,9]
 
-  const head = createMaxHeap([5,6,3,11,1,0,9])
+console.log("huuhuh",createMaxHeap([5,6,3,11,1,0,9],7))
+//

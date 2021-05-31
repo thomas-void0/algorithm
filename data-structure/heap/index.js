@@ -10,27 +10,35 @@
 // 和孩子节点的最大值max比较
 // 大于max — 不需要在下沉
 // 小于max — 和max交换位置 - 继续和下一层孩子节点比较，直到队列末尾
-function ajustMaxHeap(array, index) {
+function ajustMaxHeap(array, index, length) {
     var _a;
-    for (var i = 2 * index + 1; i < array.length; i = 2 * i + 1) {
-        if (i + 1 < array.length && array[i + 1] > array[i]) {
+    for (var i = 2 * index + 1; i < length; i = 2 * i + 1) {
+        if (i + 1 < length && array[i + 1] > array[i]) {
             i++;
         }
-        if (array[index] >= [array[i]]) {
+        //比假设的最大值大，那么就保持这个数字的位置不变
+        if (array[index] >= array[i]) {
             break;
         }
         else {
+            //比假设的最大值array[i]小，那么说明这个数字在下面，交换他们的位置
             _a = [array[i], array[index]], array[index] = _a[0], array[i] = _a[1];
             index = i;
         }
     }
 }
-function createMaxHeap(arr) {
-    var len = arr.length;
-    //从中间挑选一个数字,作为开始进行创建
-    for (var i = Math.floor(len / 2) - 1; i >= 0; i--) {
-        ajustMaxHeap(arr, i);
+/**
+ * 创建一个大顶堆
+ * @param arr
+ * @param length 要进行堆创建的数组数字长度
+ * @returns
+ */
+function createMaxHeap(arr, length) {
+    for (var i = Math.floor(length / 2) - 1; i >= 0; i--) {
+        ajustMaxHeap(arr, i, length);
     }
     return arr;
 }
-var head = createMaxHeap([5, 6, 3, 11, 1, 0, 9]);
+//[5,6,3,11,1,0,9]
+console.log("huuhuh", createMaxHeap([5, 6, 3, 11, 1, 0, 9], 7));
+//
