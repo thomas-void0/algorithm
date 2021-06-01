@@ -35,7 +35,7 @@ function minHeapPop(array) {
     if (array.length > 1) {
         result = array[0];
         array[0] = array.pop();
-        ajustMinHeap(array, 0, array.length);
+        ajustMinHeap(array, 0, array.length); //从第0个开始，重新进行排序
     }
     else if (array.length === 1) {
         return array.pop();
