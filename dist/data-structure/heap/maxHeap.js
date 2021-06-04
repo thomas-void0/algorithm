@@ -41,3 +41,27 @@ function createMaxHeap(arr, length) {
     return arr;
 }
 console.log("大顶堆:", createMaxHeap([5, 6, 3, 11, 1, 0, 9], 7));
+//大顶堆，父节点大于子节点
+function createHeapMax(arr) {
+    var _a;
+    var len = arr.length;
+    for (var i = Math.floor(len / 2) - 1; i >= 0; i--) {
+        var idx = i; //记录需要对比的max值索引
+        for (var j = 2 * idx + 1; j < len; j = 2 * j + 1) {
+            //如果需要对比的2个子结点，找出较大的那一个。与当前max进行对比
+            if (j + 1 < len && arr[j + 1] > arr[j]) {
+                j++;
+            }
+            if (arr[idx] >= arr[j]) {
+                break;
+            }
+            else {
+                //超过max的值，就进行上浮
+                _a = [arr[j], arr[idx]], arr[idx] = _a[0], arr[j] = _a[1];
+                idx = j;
+            }
+        }
+    }
+    return arr;
+}
+console.log("大顶堆2:", createHeapMax([5, 6, 3, 11, 1, 0, 9]));
