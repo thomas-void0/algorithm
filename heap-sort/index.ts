@@ -38,15 +38,11 @@ function _createMinHeap(arr:number[]) {
 //创建排序函数
 function heapSort(arr: number[]) {
     const sortArr = []
-    const len = arr.length - 1
+    const len = arr.length
     for (let i = 0; i < len; i++){
-        if (arr.length === 2) {
-            sortArr.push(arr[0],arr[1])
-        } else {
-            _createMinHeap(arr)
-            const min = arr.shift()
-            sortArr.push(min) 
-        }
+        _createMinHeap(arr)
+        const min = arr.shift()
+        sortArr.push(min) 
     }
     return sortArr
 }
