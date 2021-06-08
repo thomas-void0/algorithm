@@ -63,11 +63,37 @@ class Heap{
 }
 
 
-var heap = new Heap('min');
-[5, 6, 3, 11, 1, 0, 9].forEach(num => {
-    heap.add(num)
-})
+// var heap = new Heap('min');
+// [5, 6, 3, 11, 1, 0, 9].forEach(num => {
+//     heap.add(num)
+// })
 
-console.log(heap.value);
-console.log(heap.pop()); 
-console.log(heap.value);
+// console.log(heap.value);
+// console.log(heap.pop()); 
+// console.log(heap.value);
+
+
+class MyHeap{
+    type: "min" | "max"
+    heap:number[] //创建一个默认堆
+    constructor(type:"min" | "max" = "min") {
+        this.type = type
+        this.heap = []
+    }
+
+    //创建一个堆
+    createHeap(arr:number[]) {
+       //根据type判断是创建最大堆还是最小堆
+        
+    }
+
+    //往堆中添加数据
+    add(element: number) {
+        
+    }
+
+    //获取数据
+    pop() {
+        
+    }
+}

@@ -63,10 +63,28 @@ var Heap = /** @class */ (function () {
     };
     return Heap;
 }());
-var heap = new Heap('min');
-[5, 6, 3, 11, 1, 0, 9].forEach(function (num) {
-    heap.add(num);
-});
-console.log(heap.value);
-console.log(heap.pop());
-console.log(heap.value);
+// var heap = new Heap('min');
+// [5, 6, 3, 11, 1, 0, 9].forEach(num => {
+//     heap.add(num)
+// })
+// console.log(heap.value);
+// console.log(heap.pop()); 
+// console.log(heap.value);
+var MyHeap = /** @class */ (function () {
+    function MyHeap(type) {
+        if (type === void 0) { type = "min"; }
+        this.type = type;
+        this.heap = [];
+    }
+    //创建一个堆
+    MyHeap.prototype.createHeap = function (arr) {
+        //根据type判断是创建最大堆还是最小堆
+    };
+    //往堆中添加数据
+    MyHeap.prototype.add = function (element) {
+    };
+    //获取数据
+    MyHeap.prototype.pop = function () {
+    };
+    return MyHeap;
+}());

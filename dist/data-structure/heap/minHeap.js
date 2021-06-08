@@ -26,6 +26,29 @@ function createMinHeap(arr, length) {
     return arr;
 }
 console.log("小顶堆:", createMinHeap([5, 6, 3, 11, 1, 0, 9], 7));
+//堆的插入,堆的插入要从下到上进行上浮
+function add(arr, element) {
+    var _a;
+    //添加到末尾
+    arr.push(element);
+    //对元素位置进行调整
+    if (arr.length > 1) {
+        var index = arr.length - 1; //最后一个元素
+        var target = Math.floor((index - 1) / 2); //目的是找出最下层的父节点
+        while (target >= 0) {
+            //与找出的父节点进行对比
+            if (arr[index] < arr[target]) {
+                _a = [arr[target], arr[index]], arr[index] = _a[0], arr[target] = _a[1]; //交换元素的位置
+                index = target; //获取交换位置后，插入的元素的element
+                target = Math.floor((index - 1) / 2); //获取到更上一级的父节点，进行对比
+            }
+            else {
+                break;
+            }
+        }
+    }
+    return arr;
+}
 //堆的插入
 // 由于堆属于优先队列，只能从末尾添加
 // 添加后有可能破坏堆的结构，需要从下到上进行调整
