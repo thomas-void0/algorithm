@@ -84,12 +84,23 @@ var MaxHeap = /** @class */ (function () {
         //平衡被打破,重新进行堆构建
         this.rebuildHeap();
     };
+    //删除方法
+    MaxHeap.prototype.delete = function (delIndex) {
+        //如果索引值不符合规范，直接返回
+        if (delIndex >= this.size)
+            return;
+        //删除并且进行堆平衡
+        var result = this.data.splice(delIndex, 1);
+        this.size--;
+        //检测删除后的序列是否平衡
+        !this.isHeap() && this.rebuildHeap(); //重新构建
+        return result;
+    };
     return MaxHeap;
 }());
 // const maxHeap = new MaxHeap([5, 6, 3, 11, 1, 0, 9])
 var maxHeap = new MaxHeap([11, 6, 9, 5, 1, 0, 3]);
 maxHeap.rebuildHeap();
-console.log("huhu", maxHeap.data);
-maxHeap.insert(22);
-console.log("huhu2", maxHeap.data);
-maxHeap.insert(2);
+console.log("heapPrev:", maxHeap.data);
+maxHeap.delete(2);
+console.log("heapCurrent:", maxHeap.data);
