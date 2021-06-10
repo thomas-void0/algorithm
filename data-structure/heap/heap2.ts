@@ -49,11 +49,12 @@ class MaxHeap{
     }
 
     //一个排序的函数，将数组从小到大进行排序
+    //这里找出依据的是，大顶堆的根结点。一定是最大值。不断的构建大顶堆，并且缩短比较的序列长度。那么最后所有的数字都能够从大到小进行排列
     sort() {
         for (let i = this.size - 1; i >= 0; i--){
-            this.swap(0, i)
-            this.size--
-            this.maxHeapify(0)
+            this.swap(0, i) //最大的值一定是根结点，将当前的最大值往后排.
+            this.size-- //缩短遍历的序列长度，已经排序的就无须再排
+            this.maxHeapify(0)//对不断缩小的序列进行堆平衡
         }
     }
 }
