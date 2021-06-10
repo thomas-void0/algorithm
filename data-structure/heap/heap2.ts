@@ -6,7 +6,7 @@ class MaxHeap{
         this.size = arr.length
     }
     //对一个二分堆进行调整
-    maxHeapify(index:number):any{
+    maxHeapify(index: number): any{
         let maxIndex = index;//设置一个二分堆中最大值的索引值。
         if (index >= this.size) return;//如果当前序列中的索引值小于最大值的索引值。那么不符合执行条件直接返回。
 
@@ -29,8 +29,7 @@ class MaxHeap{
         }
 
         //交换分结点的位置
-        [this.data[maxIndex], this.data[index]] = [this.data[index], this.data[maxIndex]]
-        
+        this.swap(maxIndex, index)
         //继续向下执行，此时的maxIndex就是下沉的那个结点的索引。(原本父节点的数字进行下一轮的对比)
         return this.maxHeapify(maxIndex)
     }
@@ -43,7 +42,24 @@ class MaxHeap{
             this.maxHeapify(i)
         }
     }
+
+    //交换两个索引值之间的位置
+    swap(firstIndex:number,secondIndex:number) {
+        [this.data[firstIndex],this.data[secondIndex]] = [this.data[secondIndex],this.data[firstIndex]] 
+    }
+
+    //一个排序的函数，将数组从小到大进行排序
+    sort() {
+        for (let i = this.size - 1; i >= 0; i--){
+            this.swap(0, i)
+            this.size--
+            this.maxHeapify(0)
+        }
+    }
 }
-const maxHeap = new MaxHeap([5, 6, 3, 11, 1, 0, 9])
-maxHeap.rebuildHeap()
+// const maxHeap = new MaxHeap([5, 6, 3, 11, 1, 0, 9])
+const maxHeap = new MaxHeap([11, 6, 9, 5, 1, 0, 3])
+// maxHeap.rebuildHeap()
+console.log("huhu",maxHeap.data)
+maxHeap.sort()
 console.log("huhu",maxHeap.data)
