@@ -65,3 +65,4 @@ function createHeapMax(arr:number[]) {
   return arr
 }
 console.log("大顶堆2:", createHeapMax([5, 6, 3, 11, 1, 0, 9]))
+
