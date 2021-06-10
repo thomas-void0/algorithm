@@ -57,10 +57,41 @@ class MaxHeap{
             this.maxHeapify(0)//对不断缩小的序列进行堆平衡
         }
     }
+
+    //判断当前的堆是否依旧符合堆特性,
+    isHeap() {
+        const L = Math.floor(this.size / 2);//获取叶子结点的开始索引值
+        for (let i = L - 1; i >= 0; i--) {
+            const leftIndex = 2 * i + 1
+            const rightIndex = 2 * i + 2
+            const lValue = this.data[leftIndex] || Number.MIN_SAFE_INTEGER;
+            const rValue = this.data[rightIndex] || Number.MIN_SAFE_INTEGER;
+            
+            //判断3个结点之间的最大值,借此判断平衡是否打破
+            const max = Math.max(this.data[i], lValue, rValue);
+            
+            //如果不满足最大值等于父节点，那么不符合堆平衡
+            return max === this.data[i]
+        }
+    }
+     
+
+    //插入方法
+    insert(element: number) {
+        this.data.push(element)
+        this.size++
+        //判断是否平衡，如果平衡就无须进行处理。
+        if (this.isHeap()) {
+            return
+        }
+        //平衡被打破,重新进行堆构建
+        this.rebuildHeap()
+    }
 }
 // const maxHeap = new MaxHeap([5, 6, 3, 11, 1, 0, 9])
 const maxHeap = new MaxHeap([11, 6, 9, 5, 1, 0, 3])
-// maxHeap.rebuildHeap()
-console.log("huhu",maxHeap.data)
-maxHeap.sort()
-console.log("huhu",maxHeap.data)
+maxHeap.rebuildHeap()
+console.log("huhu", maxHeap.data)
+maxHeap.insert(22)
+console.log("huhu2", maxHeap.data)
+maxHeap.insert(2)
