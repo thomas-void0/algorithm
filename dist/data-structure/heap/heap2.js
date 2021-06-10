@@ -28,19 +28,20 @@ var MaxHeap = /** @class */ (function () {
         if (rightIndex < this.size && this.data[rightIndex] > this.data[maxIndex]) {
             maxIndex = rightIndex;
         }
-        //如果最大值就是原本执行的分结点，那么直接返回
+        //如果最大值就是原本执行的父结点，或者左右叶子结点索引值不满足序列长度。那么直接返回
         if (maxIndex === index) {
             return;
         }
         //交换分结点的位置
         _a = [this.data[index], this.data[maxIndex]], this.data[maxIndex] = _a[0], this.data[index] = _a[1];
-        //继续向下执行，此时的maxIndex就是下沉的那个结点的索引
+        //继续向下执行，此时的maxIndex就是下沉的那个结点的索引。(原本父节点的数字进行下一轮的对比)
         return this.maxHeapify(maxIndex);
     };
     //构建最大堆
     MaxHeap.prototype.rebuildHeap = function () {
-        //获取到所有的叶子结点
+        //获取到叶子结点的开始
         var LIndex = Math.floor(this.size / 2);
+        //以所有的非叶子结点开始进行构建，所有的非叶子结点都有自己的叶子结点。所以通过遍历构建去寻找他们的左右叶子结点
         for (var i = LIndex - 1; i >= 0; i--) {
             this.maxHeapify(i);
         }
