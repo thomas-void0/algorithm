@@ -90,9 +90,11 @@ class MyHeap{
 var heap1 = new MyHeap('max');
 heap1.createHeap([5, 6, 3, 11, 1, 0, 9])
 
-console.log(heap1.heap);
+console.log(heap1.heap); //[11, 6, 9, 5, 1, 0, 3]
 heap1.add(12)
-console.log(heap1.heap);
+console.log(heap1.heap); //[12, 11, 9, 6, 1, 0, 3, 5]
 heap1.pop()
-console.log(heap1.heap);
-// console.log(heap.value);
+console.log(heap1.heap); //[11, 6, 9, 5, 1, 0, 3]
+
+
+
