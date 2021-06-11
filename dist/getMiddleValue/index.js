@@ -111,7 +111,7 @@ var Heap = /** @class */ (function () {
             }
         }
         else {
-            this.heap.shift();
+            this.heap.pop();
         }
         return result;
     };
@@ -125,12 +125,12 @@ function Insert(num) {
     //奇数
     if (count % 2 === 1) {
         maxH.add(num); //最大堆添加此数值
-        maxH.add(maxH.pop()); //最大堆的根节点加入到最小堆中
+        minH.add(maxH.pop()); //最大堆的根节点加入到最小堆中
     }
     else {
         //偶数
         minH.add(num); //最小堆添加此数值
-        minH.add(minH.pop()); //最大堆添加最小堆的根节点，
+        maxH.add(minH.pop()); //最大堆添加最小堆的根节点，
     }
 }
 //获取中位数
@@ -142,3 +142,5 @@ function GetMedian() {
         return (minH.heap[0] + minH.heap[0]) / 2;
     }
 }
+[1, 2, 3, 4, 5].forEach(function (item) { return Insert(item); });
+console.log("GetMedian==>", GetMedian());
