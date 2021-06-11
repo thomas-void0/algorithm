@@ -83,12 +83,49 @@ class Heap{
         }
     }
 
-    //删除
+    //删除，从头部删除，将尾部的叶子节点放到头部。进行下沉操作
     pop() {
-       const result = this.heap.shift()
+        const result = this.heap[0] || null
         if (this.heap.length > 1) {
-            
+            //将最后一个叶子节点放到第一个
+            this.heap[0] = this.heap[this.heap.length - 1];
+            //删除最后一个节点
+            this.heap.pop()
+            //进行下沉操作，与其子节点进行对比
+            let currentIndex = 0
+            while (currentIndex >= 0) {
+                let targetIndex = currentIndex
+                //找出左右两个子节点的值
+                const leftIndex = currentIndex * 2 + 1
+                const rightIndex = currentIndex * 2 + 2
+                //对比3个值
+                if (
+                    (this.type === 'max' && this.heap[leftIndex] > this.heap[targetIndex]) ||
+                    (this.type === "min" && this.heap[leftIndex] < this.heap[targetIndex])
+                ) {
+                    targetIndex = leftIndex
+                }
+
+                if (
+                    (this.type === 'max' && this.heap[rightIndex] > this.heap[targetIndex]) ||
+                    (this.type === "min" && this.heap[rightIndex] < this.heap[targetIndex])
+                ) {
+                    targetIndex = rightIndex
+                }
+                
+                //如果该二分堆平衡，则不进行处理
+                if (targetIndex === currentIndex) break
+                
+                //下沉此数字
+                [this.heap[targetIndex],this.heap[currentIndex]] = [this.heap[currentIndex],this.heap[targetIndex]]
+
+                //获取下沉后的下一层子节点
+                currentIndex = targetIndex
+            }
+        } else {
+            this.heap.shift()
         }
+        return result
     }
 }
 
@@ -100,6 +137,11 @@ console.log(heap.heap)
 const heap2 = new Heap("max")
 heap2.create([5, 6, 3, 11, 1, 0, 9, 33])
 console.log(heap2.heap)
+heap2.pop()
+console.log("pop1====>",heap2.heap)
+heap2.pop()
+console.log("pop2====>",heap2.heap)
+
     // let count = 0;
     // function Insert(num:number) {
     //     count++;
