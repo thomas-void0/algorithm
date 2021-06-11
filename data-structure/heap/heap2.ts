@@ -71,8 +71,9 @@ class MaxHeap{
             const max = Math.max(this.data[i], lValue, rValue);
             
             //如果不满足最大值等于父节点，那么不符合堆平衡
-            return max === this.data[i]
+            if(max !== this.data[i]) return false
         }
+        return true
     }
      
 

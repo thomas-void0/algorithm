@@ -70,8 +70,10 @@ var MaxHeap = /** @class */ (function () {
             //判断3个结点之间的最大值,借此判断平衡是否打破
             var max = Math.max(this.data[i], lValue, rValue);
             //如果不满足最大值等于父节点，那么不符合堆平衡
-            return max === this.data[i];
+            if (max !== this.data[i])
+                return false;
         }
+        return true;
     };
     //插入方法
     MaxHeap.prototype.insert = function (element) {
