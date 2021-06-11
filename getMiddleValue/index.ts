@@ -29,7 +29,7 @@ class Heap{
         //交换位置
         [arr[parentIndex], arr[index]] = [arr[index], arr[parentIndex]]
         
-        //将原本的父节点放到下一轮中进行堆构建
+        //将原本的父节点放到下一轮中再找父节点进行堆构建
         this.heapify(arr,parentIndex)
     }
 
@@ -63,17 +63,21 @@ class Heap{
         this.heap.push(element);
         //检测是否需要进行上浮操作
         if (this.isHeap()) return
-
         //进行上浮操作
         let currentIndex = this.heap.length - 1
+        //因为所有子节点的父节点之间的索引关系都满足 cosnt parentIndex = Math.floor((childIndex - 1) / 2 )
+        let parentIndex = Math.floor((currentIndex - 1) / 2) 
         //找到此数的父节点的索引值
-        let parentIndex = Math.floor(currentIndex / 2) - 1
         while (parentIndex >= 0) {
-            if (this.heap[parentIndex] < this.heap[currentIndex]) {
-                [this.heap[parentIndex],this.heap[currentIndex]] = [this.heap[currentIndex],this.heap[parentIndex]]
-                currentIndex = parentIndex
-                parentIndex = Math.floor((currentIndex - 1) / 2)
+            if (
+                (this.type === 'max' && this.heap[parentIndex] < this.heap[currentIndex]) ||
+                (this.type === "min" && this.heap[parentIndex] > this.heap[currentIndex])
+            ) {
+                [this.heap[parentIndex], this.heap[currentIndex]] = [this.heap[currentIndex], this.heap[parentIndex]]
+                currentIndex = parentIndex //当前上浮的这个数的索引值，作为下一轮对比的基数索引值
+                parentIndex = Math.floor((currentIndex - 1) / 2) //找出基数的父节点索引值
             } else {
+                //如果满足堆的平衡，直接打断循环
                 break
             }
         }
@@ -87,6 +91,15 @@ class Heap{
         }
     }
 }
+
+const heap = new Heap("max")
+heap.create([5, 6, 3, 11, 1, 0, 9])
+console.log(heap.heap)
+heap.add(33)
+console.log(heap.heap)
+const heap2 = new Heap("max")
+heap2.create([5, 6, 3, 11, 1, 0, 9, 33])
+console.log(heap2.heap)
     // let count = 0;
     // function Insert(num:number) {
     //     count++;
