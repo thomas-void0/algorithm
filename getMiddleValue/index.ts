@@ -129,38 +129,28 @@ class Heap{
     }
 }
 
-const heap = new Heap("max")
-heap.create([5, 6, 3, 11, 1, 0, 9])
-console.log(heap.heap)
-heap.add(33)
-console.log(heap.heap)
-const heap2 = new Heap("max")
-heap2.create([5, 6, 3, 11, 1, 0, 9, 33])
-console.log(heap2.heap)
-heap2.pop()
-console.log("pop1====>",heap2.heap)
-heap2.pop()
-console.log("pop2====>",heap2.heap)
+const maxH = new Heap("max")
+const minH = new Heap("min")
 
-    // let count = 0;
-    // function Insert(num:number) {
-    //     count++;
-    //     //奇数
-    //   if (count % 2 === 1) {
-    //     maxHeap.add(num); //最大堆添加此数值
-    //     minHeap.add(maxHeap.pop());//最大堆的根节点加入到最小堆中
-    //   } else {
-    //       //偶数
-    //     minHeap.add(num);//最小堆添加此数值
-    //     maxHeap.add(minHeap.pop());//最大堆添加最小堆的根节点，
-    //   }
-    // }
-    // //获取中位数
-    // function GetMedian() {
-    //   if (count % 2 === 1) {
-    //     return minHeap.value[0];
-    //   } else {
-    //     return (minHeap.value[0] + maxHeap.value[0]) / 2
-    //   }
-    // }
+let count = 0;
+function Insert(num:number) {
+    count++;
+    //奇数
+    if (count % 2 === 1) {
+        maxH.add(num); //最大堆添加此数值
+        maxH.add(maxH.pop()!);//最大堆的根节点加入到最小堆中
+    } else {
+        //偶数
+        minH.add(num);//最小堆添加此数值
+        minH.add(minH.pop()!);//最大堆添加最小堆的根节点，
+    }
+}
+//获取中位数
+function GetMedian() {
+    if (count % 2 === 1) {
+    return minH.heap[0];
+    } else {
+    return (minH.heap[0] + minH.heap[0]) / 2
+    }
+}
 
