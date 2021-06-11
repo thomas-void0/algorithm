@@ -46,19 +46,45 @@ class Heap{
     isHeap() {
         const LStartIndex = Math.floor(this.heap.length / 2) 
         for (let i = LStartIndex - 1; i >= 0; i--){
-            const leftValue = this.heap[i * 2 + 1]
-            const rightValue = this.heap[i * 2 + 2]
+            const leftValue = this.heap[i * 2 + 1] || Number.MIN_SAFE_INTEGER
+            const rightValue = this.heap[i * 2 + 2] || Number.MIN_SAFE_INTEGER
 
-            const max = Math.max(this.heap[i], leftValue, rightValue)
+            const value = this.type === 'max'
+                ? Math.max(this.heap[i], leftValue, rightValue)
+                : Math.min(this.heap[i], leftValue, rightValue)
             
-            if(max !== this.heap[i]) return false
+            if(value !== this.heap[i]) return false
         }
         return true
     }
 
     //添加
     add(element: number) {
-        
+        this.heap.push(element);
+        //检测是否需要进行上浮操作
+        if (this.isHeap()) return
+
+        //进行上浮操作
+        let currentIndex = this.heap.length - 1
+        //找到此数的父节点的索引值
+        let parentIndex = Math.floor(currentIndex / 2) - 1
+        while (parentIndex >= 0) {
+            if (this.heap[parentIndex] < this.heap[currentIndex]) {
+                [this.heap[parentIndex],this.heap[currentIndex]] = [this.heap[currentIndex],this.heap[parentIndex]]
+                currentIndex = parentIndex
+                parentIndex = Math.floor((currentIndex - 1) / 2)
+            } else {
+                break
+            }
+        }
+    }
+
+    //删除
+    pop() {
+       const result = this.heap.shift()
+        if (this.heap.length > 1) {
+            
+        }
     }
 }
     // let count = 0;
