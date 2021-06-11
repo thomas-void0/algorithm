@@ -132,7 +132,7 @@ class Heap{
 const maxH = new Heap("max")
 const minH = new Heap("min")
 
-let count = 0;
+let count = 0;//用来判断此数组中有几个数字
 function Insert(num:number) {
     count++;
     //奇数
@@ -144,6 +144,8 @@ function Insert(num:number) {
         minH.add(num);//最小堆添加此数值
         maxH.add(minH.pop()!);//最大堆添加最小堆的根节点，
     }
+    console.log("min",minH.heap)
+    console.log("max",maxH.heap)
 }
 //获取中位数
 function GetMedian() {
@@ -154,6 +156,9 @@ function GetMedian() {
     }
 }
 
-[1, 2, 3 , 4, 5].forEach(item => Insert(item))
+[1, 2, 3, 4, 5].forEach(item => Insert(item))
+console.log("一个最大堆",maxH.heap)
+console.log("一个最小堆",minH.heap)
+console.log("count:",count)
 
 console.log("GetMedian==>",GetMedian())
