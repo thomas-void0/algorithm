@@ -21,19 +21,17 @@ class BST{
             this.root = node
             return
         }
-        let currentNode = this.root
+        let currentNode:Node1 | null = this.root
         let parentNode = null
         while (currentNode) {
             parentNode = currentNode
             if (data < parentNode.data) {
-                //@ts-ignore
                 currentNode = currentNode.left
                 if (!currentNode) {
                     parentNode.left = new Node1(data) 
                     return
                 }
             } else {
-                //@ts-ignore
                 currentNode = currentNode.right
                 if (!currentNode) {
                     parentNode.right = new Node1(data) 
@@ -71,7 +69,7 @@ class BST{
         let current = this.root
         while (current) {
             if (!current.left) {
-                return current
+                return current.data
             }
             current = current.left
         }
@@ -81,11 +79,36 @@ class BST{
         let current = this.root 
         while (current) {
             if (!current.right) {
-                return current
+                return current.data
             }
             current = current.right
         }
     }
-    //获取某一个值
+    //树查找
+    getNode(data:number,node:Node1 | null):Node1 | null {
+        if (node) {
+            if (data === node.data) {
+                return node
+            } else if (data < node.data) {
+                return this.getNode(data, node.left)
+            } else {
+                return this.getNode(data, node.right)
+            }
+        }
+        return null
+    }
 
 }
+const t = new BST();
+t.insert(3);
+t.insert(8);
+t.insert(1);
+t.insert(2);
+t.insert(5);
+t.insert(7);
+t.insert(6);
+t.insert(0);
+console.log(t);
+// t.middleOrder(t.root);
+console.log(t.getMin(), t.getMax());
+console.log(t.getNode(2,t.root))
