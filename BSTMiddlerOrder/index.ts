@@ -43,11 +43,9 @@ class BST2{
 }
 //二叉搜索树的中序遍历.即从left开始->parent->right
 // 输入: [1,null,2,3]
-//    1
-//     \
-//      2
-//     /
-//    3
+//    2
+//   / \
+//   1  3
 // 输出: [1,2,3]
 //递归的版本
 function middleOrder(node:any,array:number[]=[]) {
@@ -60,7 +58,7 @@ function middleOrder(node:any,array:number[]=[]) {
 }
 
 //非递归的版本,从left到data再到right
-function moddileOrder2(node:any) {
+function middleOrder2(node:any) {
     const result:any[] = []
     const stack: any[] = []
     let current = node
@@ -86,4 +84,4 @@ const t2 = new BST2();
 
 console.log("t2",t2)
 
-console.log("2222",moddileOrder2(t2.root))
+console.log("2222", middleOrder2(t2.root))
