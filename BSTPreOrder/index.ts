@@ -48,3 +48,14 @@ class BST3{
 //   1  3
 // 输出: [2,1,3]
 //递归的版本
+function preOrder(node:any,array:number[] = []) {
+    if (node) {
+        array.push(node.data)
+        preOrder(node.left,array)
+        preOrder(node.right,array)
+    }
+    return array
+}
+const t3 = new BST3();
+[2, 1, 3, null].forEach(num => num && t3.insert(num))
+console.log(preOrder(t3.root))
