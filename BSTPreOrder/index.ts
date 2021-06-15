@@ -59,3 +59,25 @@ function preOrder(node:any,array:number[] = []) {
 const t3 = new BST3();
 [2, 1, 3, null].forEach(num => num && t3.insert(num))
 console.log(preOrder(t3.root))
+
+//非递归版本
+function preOrder2(node:any) {
+    const result:number[] = []
+    const stack:Node3[] = []
+
+    let current = node
+    while (current || stack.length > 0) {
+        while (current) {
+            result.push(current.data)
+            stack.push(current)
+            current = current.left
+        }
+
+        current = stack.pop()
+        current = current.right
+    }
+    return result
+}
+const t4 = new BST3();
+[2, 1, 3, null].forEach(num => num && t4.insert(num))
+console.log(preOrder2(t4.root))
