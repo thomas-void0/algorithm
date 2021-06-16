@@ -19,3 +19,5 @@
 3. [《中序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BSTMiddlerOrder/index.ts)
 4. [《后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BSTAfterOrder/index.ts)
 5. [《根据前序遍历和中序遍历重建二叉树》](https://github.com/lmxyjy/algorithm/blob/main/RebuildBinaryTree/index.ts)
+6. [《根据前序遍历和中序遍历求解后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/GetAfterOrder/index.ts)
+

@@ -8,6 +8,7 @@
 输入
 ABC
 BAC
+
 FDXEAG
 XDEFAG
 
