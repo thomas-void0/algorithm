@@ -62,21 +62,21 @@ console.log(preOrder(t3.root))
 
 //非递归版本
 function preOrder2(node:any) {
-    const result:number[] = []
-    const stack:Node3[] = []
-
-    let current = node
-    while (current || stack.length > 0) {
-        while (current) {
-            result.push(current.data)
-            stack.push(current)
-            current = current.left
+  const result:number[] = []
+  const stack:any[] = []
+    let currentNode = node
+    while (currentNode || stack.length > 0) {
+        //入栈
+        while (currentNode) {
+            result.push(currentNode.data) //结点已经在此处被消费
+            stack.push(currentNode)
+            currentNode = currentNode.left
         }
 
-        current = stack.pop()
-        current = current.right
+        //出栈
+        stack.pop()
+        currentNode = currentNode.right
     }
-    return result
 }
 const t4 = new BST3();
 [2, 1, 3, null].forEach(num => num && t4.insert(num))
