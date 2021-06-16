@@ -1,16 +1,20 @@
 # algorithm
 
-My algorithm learning path
+# 目录
 
-# catalogue
+## 排序
 
-## sort
+1. [《冒泡排序》](https://github.com/lmxyjy/algorithm/blob/main/bubble-sort/index.ts)
+2. [《选择排序》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
+3. [《插入排序》](https://github.com/lmxyjy/algorithm/blob/main/insertion-sort/index.ts)
+4. [《堆排序》](https://github.com/lmxyjy/algorithm/blob/main/heap-sort/index.ts)
 
-1. [《bubble-sort》](https://github.com/lmxyjy/algorithm/blob/main/bubble-sort/index.ts)
-2. [《selection-sort》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
-3. [《insertion-sort》](https://github.com/lmxyjy/algorithm/blob/main/insertion-sort/index.ts)
-4. [《heap-sort》](https://github.com/lmxyjy/algorithm/blob/main/heap-sort/index.ts)
-5. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/k/index.ts)
+## 堆
+1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/heap/heap.ts)
+2. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/k/index.ts)
 
-## data-structure
-1. [《heap》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/heap/heap.ts)
+## 二叉树
+1. [《二叉搜索树》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/binaryTree/BST.ts)
+2. [《前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BSTPreOrder/index.ts)
+3. [《中序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BSTMiddlerOrder/index.ts)
+4. [《后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BSTAfterOrder/index.ts)
