@@ -46,4 +46,6 @@ namespace RebuildBinaryTree{
         node.right = reConstructBinaryTree(preRight, vinRight)
         return node
     }
+    const node = reConstructBinaryTree([1,2,4,7,3,5,6,8],[4,7,2,1,5,3,8,6])
+    console.log("node:",node)
 }
