@@ -7,4 +7,75 @@
  */
 namespace symmetricalBinaryTree{
 
+    //判断是否对称
+    function isSymmetricalTree(node1:any, node2:any):any {
+        if (!node1 && !node2) return true
+        if (!node1 || !node2) return false
+        if (node1.data !== node2.data) return false
+        
+        return isSymmetricalTree(node1.left,node2.right) && isSymmetricalTree(node1.right,node2.left)
+    }
+
+    //创建一颗对称二叉树
+    const t1 = {
+        data: 8,
+        left: {
+            data: 6,
+            left: {
+                data: 5,
+                left: null,
+                right:null
+            },
+            right: {
+                data: 7,
+                left: null,
+                right:null
+            }
+        },
+        right: {
+            data: 6,
+            left: {
+                data: 7,
+                left: null,
+                right:null
+            },
+            right: {
+                data: 5,
+                left: null,
+                right:null
+            }
+        }
+    };
+    //非对称
+    const t2 = {
+        data: 8,
+        left: {
+            data: 6,
+            left: {
+                data: 51,
+                left: null,
+                right:null
+            },
+            right: {
+                data: 7,
+                left: null,
+                right:null
+            }
+        },
+        right: {
+            data: 6,
+            left: {
+                data: 7,
+                left: null,
+                right:null
+            },
+            right: {
+                data: 5,
+                left: null,
+                right:null
+            }
+        }
+    };
+    console.log("isSymmetricalTree1:",isSymmetricalTree(t1,t1))
+    console.log("isSymmetricalTree2:",isSymmetricalTree(t2,t2))
 }
