@@ -62,12 +62,29 @@ console.log(afterOrder(t5.root))
 
 //非递归版本
 function afterOrder2(node:any) {
-    const result:number[] = []
-    const stack:any[] = []
-
-    let currentNode = node
-  
-
+    const result = [];
+    const stack = [];
+    let last = null; // 标记上一个访问的节点
+    let current = node;
+    while (current || stack.length > 0) {
+        //left结点入栈
+      while (current) {
+        stack.push(current);
+        current = current.left;
+      }
+        //获取栈中最后一个结点
+        current = stack[stack.length - 1];
+        //如果此结点不存在右子树，或者右子树已经被消费了。
+      if (!current.right || current.right == last) {
+        current = stack.pop();
+        result.push(current.data);
+        last = current;
+        current = null; // 继续弹栈
+      } else {
+        current = current.right;
+      }
+    }
+    return result;
 }
 const t6 = new BSt6();
 [2, 1, 3, null].forEach(num => num && t6.insert(num))
