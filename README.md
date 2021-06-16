@@ -22,3 +22,4 @@
 6. [《根据前序遍历和中序遍历求解后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/GetAfterOrder/index.ts)
 7. [《判断是否为对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/symmetricalBinaryTree/index.ts)
 8. [《镜像二叉树》](https://github.com/lmxyjy/algorithm/blob/main/mirrorBinaryTree/index.ts)
+9. [《取出二叉树中第k个最小的值》](https://github.com/lmxyjy/algorithm/blob/main/binaryTreeSearchKNode/index.ts)
