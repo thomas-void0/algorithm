@@ -74,7 +74,7 @@ function afterOrder2(node:any) {
       }
         //获取栈中最后一个结点
         current = stack[stack.length - 1];
-        //如果此结点不存在右子树，或者右子树已经被消费了。
+        //如果此结点不存在右子树，或者右子树已经被消费了。那么就将该节点的data值保存到数组中去
       if (!current.right || current.right == last) {
         current = stack.pop();
         result.push(current.data);
