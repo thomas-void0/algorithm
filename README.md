@@ -24,3 +24,6 @@
 8. [《镜像二叉树》](https://github.com/lmxyjy/algorithm/blob/main/mirrorBinaryTree/index.ts)
 9. [《取出二叉树中第k个最小的值》](https://github.com/lmxyjy/algorithm/blob/main/binaryTreeSearchKNode/index.ts)
 <!-- 10. [《判断一个序列是否是某个二叉树的后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binaryTreeAfterOrder/index.ts) -->
+
+## 链表
+1. [《遍历链表》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/chainTable/BST.ts)
