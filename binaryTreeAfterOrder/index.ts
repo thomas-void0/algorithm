@@ -96,7 +96,7 @@ namespace binaryTreeAfterOrder {
         const stack: any[] = []
         let current:any = t1
 
-        while (current || stack.length > 1) {
+        while (current || stack.length > 0) {
             while (current) {
                 result.push(current.data)
                 stack.push(current)
@@ -106,6 +106,7 @@ namespace binaryTreeAfterOrder {
             current = stack.pop()
             current = current.right
         }
+        return result
     }
 
     function VerifySquenceOfBST(sequence:any):boolean {
@@ -132,7 +133,9 @@ namespace binaryTreeAfterOrder {
           return left && right;
         }
         return false
-      }
+    }
+    console.log(preTest())
     console.log(afterTest())
-    console.log(VerifySquenceOfBST([8, 10, 9, 10, 12, 11, 10]))
+    console.log("after",VerifySquenceOfBST([8, 10, 9, 10, 12, 11, 10]))
+    console.log("pre",VerifySquenceOfBST([10, 9, 8, 10, 11, 10, 12]))
 }
