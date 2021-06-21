@@ -26,4 +26,5 @@
 <!-- 10. [《判断一个序列是否是某个二叉树的后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binaryTreeAfterOrder/index.ts) -->
 
 ## 链表
-1. [《遍历链表》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/chainTable/BST.ts)
+1. [《遍历链表》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/chainTable/index.ts)
+2. [《反转链表》](https://github.com/lmxyjy/algorithm/blob/main/reverseChainTable/index.ts)
