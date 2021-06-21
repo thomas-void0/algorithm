@@ -28,3 +28,6 @@
 ## 链表
 1. [《遍历链表》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/chainTable/index.ts)
 2. [《反转链表》](https://github.com/lmxyjy/algorithm/blob/main/reverseChainTable/index.ts)
+
+## 数组
+1. [《把数组排成最小的数》](https://github.com/lmxyjy/algorithm/blob/main/sortArray/index.ts)

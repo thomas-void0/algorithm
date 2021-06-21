@@ -16,8 +16,9 @@ namespace sortArray{
 
     function compare(a:number,b:number):number {
         const front = '' + a + b
-        const behind = '' + b + a
-        return  Number(front) - Number(behind)
+        const after = '' + b + a
+        return Number(front) - Number(after)
     }
-    console.log("---->",sortArray([3,32,321]))
+
+    console.log(sortArray([3,32,321]))
 }
