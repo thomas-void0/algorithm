@@ -32,3 +32,4 @@
 ## 数组
 1. [《把数组排成最小的数》](https://github.com/lmxyjy/algorithm/blob/main/sortArray/index.ts)
 2. [《寻找数组中第一个只出现了一次的数》](https://github.com/lmxyjy/algorithm/blob/main/searchArrayNum/index.ts)
+3. [《重构数组顺序》](https://github.com/lmxyjy/algorithm/blob/main/adjustArrayOrder/index.ts)
