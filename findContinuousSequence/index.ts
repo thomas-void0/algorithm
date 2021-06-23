@@ -9,19 +9,24 @@ namespace FindContinuousSequence{
         let big = 2;
         let small = 1;
         let currentSum = 3;
+
+        //如果最大数小于总数则进行循环。
         while (big < sum) {
+            //当前的总数<总数 && 最大数<总数
             while (currentSum < sum && big < sum) {
-                child.push(++big);
+                child.push(++big); //最大值往右边移动
                 currentSum += big;
             }
+            //当前的总数>总数 && 最小数<最大数
             while (currentSum > sum && small < big) {
                 child.shift();
-                currentSum -= small++;
+                currentSum -= small++;//减去最小值，并且最小值往右边移动
             }
+            //如果有满足条件的，则输出此数组
             if (currentSum === sum && child.length > 1) {
                 result.push(child.slice());
-                child.push(++big);
-                currentSum += big;
+                child.push(++big); //最大值往右边移动
+                currentSum += big; //当前总数加上最大值
             }
         }
         return result;
