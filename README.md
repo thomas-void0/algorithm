@@ -38,3 +38,4 @@
 6. [《获取子数组最大值》](https://github.com/lmxyjy/algorithm/blob/main/findGreatestSumOfSubArray/index.ts)
 7. [《获取满足条件的两个数》](https://github.com/lmxyjy/algorithm/blob/main/findNumbersWithSum/index.ts)
 8. [《两数之和》](https://github.com/lmxyjy/algorithm/blob/main/twoSum/index.ts)
+9. [《判断扑克牌顺子》](https://github.com/lmxyjy/algorithm/blob/main/IsContinuous/index.ts)
