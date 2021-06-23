@@ -34,3 +34,6 @@
 2. [《寻找数组中第一个只出现了一次的数》](https://github.com/lmxyjy/algorithm/blob/main/searchArrayNum/index.ts)
 3. [《重构数组顺序》](https://github.com/lmxyjy/algorithm/blob/main/adjustArrayOrder/index.ts)
 4. [《乘积数组》](https://github.com/lmxyjy/algorithm/blob/main/buildArray/index.ts)
+5. [《获取连续数列》](https://github.com/lmxyjy/algorithm/blob/main/findContinuousSequence/index.ts)
+6. [《获取子数组最大值》](https://github.com/lmxyjy/algorithm/blob/main/findGreatestSumOfSubArray/index.ts)
+7. [《获取满足条件的两个数》](https://github.com/lmxyjy/algorithm/blob/main/findNumbersWithSum/index.ts)
