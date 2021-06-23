@@ -37,3 +37,4 @@
 5. [《获取连续数列》](https://github.com/lmxyjy/algorithm/blob/main/findContinuousSequence/index.ts)
 6. [《获取子数组最大值》](https://github.com/lmxyjy/algorithm/blob/main/findGreatestSumOfSubArray/index.ts)
 7. [《获取满足条件的两个数》](https://github.com/lmxyjy/algorithm/blob/main/findNumbersWithSum/index.ts)
+8. [《两数之和》](https://github.com/lmxyjy/algorithm/blob/main/twoSum/index.ts)
