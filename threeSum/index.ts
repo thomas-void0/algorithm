@@ -27,25 +27,27 @@ namespace threeSum{
         array.sort(compare) //[-4, -1, -1, 0, 1, 2]
         const len = array.length
         for (let i = 0; i < len; i++){
-            // 跳过重复数字
-            if (i && array[i] === array[i - 1]) { continue; }
-            let left = i + 1;
-            let right = array.length - 1;
+            // 如果上一轮执行的基准数，和本轮相同则跳过重复数字
+            if(i && array[i] === array[i-1]) continue
+            let left = i + 1
+            let right = len - 1
             while (left < right) {
-                const sum = array[i] + array[left] + array[right];
+                const sum = array[i] + array[left] + array[right]
                 if (sum > 0) {
-                    right--;
+                    right--
                 } else if (sum < 0) {
-                    left++;
+                    left++
                 } else {
-                    result.push([array[i], array[left++], array[right--]]);
-                    // 跳过重复数字
+                    result.push([array[i], array[left], array[right]])
+                    //缩小查找范围
+                    left++
+                    right--
+                    //跳过相同的数字
                     while (array[left] === array[left - 1]) {
-                        left++;
+                        left++
                     }
-                    // 跳过重复数字
                     while (array[right] === array[right + 1]) {
-                        right--;
+                        right--
                     }
                 }
             }
