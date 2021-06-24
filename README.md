@@ -4,7 +4,6 @@
 
 ## 排序
 
-1. [《冒泡排序》](https://github.com/lmxyjy/algorithm/blob/main/bubble-sort/index.ts)
 2. [《选择排序》](https://github.com/lmxyjy/algorithm/blob/main/selection-sort/index.ts)
 3. [《插入排序》](https://github.com/lmxyjy/algorithm/blob/main/insertion-sort/index.ts)
 4. [《堆排序》](https://github.com/lmxyjy/algorithm/blob/main/heap-sort/index.ts)
@@ -41,6 +40,3 @@
 9. [《判断扑克牌顺子》](https://github.com/lmxyjy/algorithm/blob/main/IsContinuous/index.ts)
 10. [《三数之和》](https://github.com/lmxyjy/algorithm/blob/main/threeSum/index.ts)
 11. [《寻找出现次数超过数组长度一半的数》](https://github.com/lmxyjy/algorithm/blob/main/moreThanHalfNum_Solution/index.ts)
-
-
-

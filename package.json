@@ -1,0 +1,22 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "# 目录",
+  "main": "fs-module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmxyjy/algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmxyjy/algorithm/issues"
+  },
+  "homepage": "https://github.com/lmxyjy/algorithm#readme",
+  "devDependencies": {
+    "chokidar": "^3.5.2"
+  }
+}
