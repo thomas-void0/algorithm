@@ -12,7 +12,7 @@
   [-2,  0, 0, 2]
 ]
  */
-namespace fourSum{
+namespace fourSum{ //[1, 0, -1, 0, -2, 2]
     function fourSum(nums: number[]) {
         const result = []
         nums.sort(compare)
@@ -54,6 +54,5 @@ namespace fourSum{
         if (value === 0) return 0
         return -1
     }
-
     console.log("test:",fourSum([1, 0, -1, 0, -2, 2]))
 }
