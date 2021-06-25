@@ -43,3 +43,4 @@
 12. [《二分查找》](https://github.com/lmxyjy/algorithm/blob/main/binarySearch/index.ts)
 
 ## 栈和队列
+1. [《求解最小值》](https://github.com/lmxyjy/algorithm/blob/main/stack/index.ts)
