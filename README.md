@@ -44,3 +44,5 @@
 
 ## 栈和队列
 1. [《求解最小值》](https://github.com/lmxyjy/algorithm/blob/main/stack/index.ts)
+<!-- 2. [《maxSlidingWindow》](https://github.com/lmxyjy/algorithm/blob/main/maxSlidingWindow/index.ts) -->
+3. [《实现栈》](https://github.com/lmxyjy/algorithm/blob/main/implementStack/index.ts)
