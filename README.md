@@ -8,6 +8,7 @@
 3. [《插入排序》](https://github.com/lmxyjy/algorithm/blob/main/insertion-sort/index.ts)
 4. [《堆排序》](https://github.com/lmxyjy/algorithm/blob/main/heap-sort/index.ts)
 5. [《归并排序》](https://github.com/lmxyjy/algorithm/blob/main/merge-sort/index.ts)
+6. [《快速排序》](https://github.com/lmxyjy/algorithm/blob/main/fast-sort/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/data-structure/heap/heap.ts)
