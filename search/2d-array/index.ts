@@ -33,5 +33,39 @@ namespace search2DArray{
         }
     }
 
-    console.log(search([[1, 2, 3], [4, 5, 6], [7, 8, 9],], 15))
+    //二分查找法
+    function binarySearch(
+        array: number[],
+        target: number,
+        start: number,
+        end: number
+    ): number {
+        if (start > end) {
+            return - 1
+        }
+
+        const mid = Math.floor((start + end) / 2)
+        const midValue = array[mid]
+
+        if(target === midValue) return mid
+
+        return target > midValue
+            ? binarySearch(array, target, mid + 1, end)
+            : binarySearch(array, target, start, mid - 1)
+
+    }
+
+    function isTrue(array: number[][], target: number) {
+        for (let i = 0; i < array.length; i++){
+            const arr = array[i]
+            const valueIdx = binarySearch(arr, target, 0, arr.length)
+            if (valueIdx !== -1) {
+                return {x:valueIdx,y:i}
+            }
+        }
+      
+    }
+
+    console.log(search([[1, 2, 3], [4, 5, 6], [7, 8, 9],], 5))
+    console.log(isTrue([[1, 2, 3], [4, 5, 6], [7, 8, 9],], 5))
 }
