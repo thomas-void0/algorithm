@@ -14,7 +14,7 @@ function insertionSort(list: number[]): number[]{
     let sentry = list[0] //设置一个哨兵数字
     const sortList = [sentry]
     const len = list.length
-    while (i < len - 1) {
+    while (i < len) {
         //放在哨兵数字右边
         if (list[i] >= sentry) {
             //倒序遍历
@@ -43,4 +43,20 @@ function insertionSort(list: number[]): number[]{
 
     return sortList
 }
+function insertionSort2(array: number[]): number[]{
+    for (let i = 1; i < array.length; i++) {
+        let target = i
+        //和左侧已经排序完成后的数进行遍历对比
+        for (let j = i - 1; j >= 0; j--){
+            if (array[target] < array[j]) {
+                [array[target], array[j]] = [array[j], array[target]]
+                target = j// 再进行下一轮对比
+            } else {
+                break
+            }
+        }
+    }
+    return array;
+}
 console.log(insertionSort([5, 6, 3, 11, 1, 0, 9]))
+console.log(insertionSort2([5, 6, 3, 11, 1, 0, 9]))
