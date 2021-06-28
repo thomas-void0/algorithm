@@ -13,6 +13,10 @@
 ## 数学运算
 1. [《求和》](https://github.com/lmxyjy/algorithm/blob/main/mathematical-operations/fast-sort/index.ts)
 
+## 查找
+1. [《二维数组查找整数》](https://github.com/lmxyjy/algorithm/blob/main/search/2d-array/index.ts)
+2. [《旋转数组输出最小数》](https://github.com/lmxyjy/algorithm/blob/main/search/rotate/index.ts)
+
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
 2. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/heap/k/index.ts)
