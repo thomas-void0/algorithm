@@ -122,3 +122,45 @@ class _MaxHeap{
 const _maxHeap = new _MaxHeap([11, 6, 9, 5, 1, 0, 3])
 _maxHeap.rebuildHeap()
 console.log(_maxHeap.sort());
+
+//version 2.0
+namespace HeapSort{
+    class createMaxHeap{
+        value:number[]
+        constructor(array: number[]) {
+            this.value = []
+            this.create(array)
+        }
+        create(array: number[]) {
+            //获取分节点
+            const len = Math.floor(array.length / 2) - 1
+            for (let i = len; i >= 0; i--){
+                let idx = i
+                //获取到每个分节点的子节点进行处理:分节点和子节点的关系是:index * 2 + 1, index * 2 + 2
+                for (let j = idx * 2 + 1; j <= array.length; j++){
+                    if (array[j] > array[idx]) {
+                        [array[idx], array[j]] = [array[j], array[idx]]
+                        idx = j
+                    }
+                }
+            }
+            this.value = array
+        }
+    }
+
+    //进行排序
+    function sort(list:number[]) {
+        const heap = new createMaxHeap(list)
+        const arr = heap.value
+        const len = arr.length
+        const result = []
+        for (let i = 0; i < len; i++){
+            result.unshift(arr.shift())
+            heap.create(arr)
+        }
+        return result
+        
+    }
+    
+    console.log("sort:",sort([5, 6, 3, 11, 1, 0, 9]))
+}
