@@ -7,36 +7,35 @@
  * 若将两个有序表合并成一个有序表，称为二路归并
  */
 namespace mergeSort{
-    //分割
+    //分割,将数组切割为小数组。然后两两比较
     function mergeSort(array:number[]):number[] {
         if (array.length < 2) {
-            return array
+           return array
         }
-        
-        const mid = Math.floor(array.length / 2);
+        const mid = Math.floor(array.length / 2)
         const front = array.slice(0,mid)
         const end = array.slice(mid)
 
-        console.log("font:",front)
-        console.log("end:",end)
-
-        return merge(mergeSort(front),mergeSort(end))
+        return comMerge(mergeSort(front),mergeSort(end))
     }
 
-    function merge(front: number[], end: number[]) {
-        const tmp:number[] = []
-        while (front.length && end.length) {
-            tmp.push(front[0] < end[0] ? front.shift()! : end.shift()!)
+    function comMerge(front: number[], end: number[]) {
+        const temp:number[] = []
+
+        while (front.length > 0 && end.length > 0) {
+            temp.push(front[0] < end[0] ? front.shift()! : end.shift()!)
         }
 
-        while (front.length) {
-            tmp.push(front.shift()!)
+        //将余下较大大值依次放入temp中
+        while (front.length > 0) {
+            temp.push(front.shift()!)
         }
-        while (end.length) {
-            tmp.push(end.shift()!)
+
+        while (end.length > 0) {
+            temp.push(end.shift()!)
         }
-        console.log("tmp==>",tmp)
-        return tmp
+        
+        return temp
     }
 
     console.log("mergeSort:",mergeSort([5,6,3,11,1,0,9]))
