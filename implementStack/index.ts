@@ -28,3 +28,20 @@ namespace implementStack{
     console.log("stack1:",stack1)
     console.log("stack2:",stack2)
 }
+
+namespace implementQueue{
+    const queue1:number[] = []
+    const queue2:number[] = []
+    function push(node:number) {
+        queue1.push(node)
+    }
+
+    function pop() {
+        if (queue2.length === 0) {
+            while (queue1.length > 0) {
+                queue2.push(queue1.shift()!)
+            }
+            queue2.pop()
+        }
+    }
+}
