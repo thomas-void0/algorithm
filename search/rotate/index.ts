@@ -21,23 +21,34 @@
     出现这种情况的array类似[2,2,3,4,5,6,6],此时最小数字一定就是array[mid]或者在mid的左 边。因为右边必然都是递增的。 high = mid
 
  */
- function minNumberInRotateArray(arr:number[])
- {
-     let len = arr.length;
-     if(len == 0)  return 0;
-     let low = 0, high = len - 1;
-     while(low < high) {
-         let mid = low + Math.floor((high-low)/2);
-         if(arr[mid] > arr[high]) {
-             low = mid + 1;
-         } else if(arr[mid] == arr[high]) {
-             high = high - 1;
-         } else {
-             high = mid;
-         }
-     }
-  
-     return arr[low];
+function minNumberInRotateArray(arr: number[]) {
+     
+    //因为是一个排序数组
+    const len = arr.length
+    if(len === 0) return 0
+
+    let low = 0
+    let high = len - 1
+
+
+    while (low < high) {
+        //这里求不同分段的中间值
+        let mid = Math.floor((high - low) / 2)
+        
+        //如果中间值大于最大值，说明最小值在右边的分段中,那么缩小到右边进行对比
+        if (arr[mid] > arr[high]) {
+            low = mid + 1
+        //如果中间值小于最大值，说明最小值在左侧的分段中，那么缩小到左边进行对比
+        } else if (arr[mid] < arr[high]) {
+            high = mid
+        } else {
+            //如果中间值等于最大值，此时无法辨别最小值是在左侧还是在右侧。所以只缩小最大值的范围
+            high--
+        }
+    }
+
+    //返回最小值
+    return arr[low]
  }
 
 console.log(minNumberInRotateArray([1,0,1,1,1]))
