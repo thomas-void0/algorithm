@@ -20,7 +20,8 @@
 ## 广度优先遍历
 1. [《从上到下打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs/index.ts)
 2. [《逐层打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs2/index.ts)
-2. [《之字形打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs3/index.ts)
+3. [《之字形打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs3/index.ts)
+4. [《力扣_员工的重要性》](https://github.com/lmxyjy/algorithm/blob/main/BFS/employee/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
