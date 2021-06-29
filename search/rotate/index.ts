@@ -5,7 +5,6 @@
  * NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
  * 
  * 
- 
     旋转数组其实是由两个有序数组拼接而成的，因此我们可以使用二分法，只需要找到拼接点即可。
 
     (1)array[mid] > array[high]:
@@ -19,7 +18,6 @@
     (3)array[mid] < array[high]:
 
     出现这种情况的array类似[2,2,3,4,5,6,6],此时最小数字一定就是array[mid]或者在mid的左 边。因为右边必然都是递增的。 high = mid
-
  */
 function minNumberInRotateArray(arr: number[]) {
      

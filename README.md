@@ -17,6 +17,11 @@
 1. [《二维数组查找整数》](https://github.com/lmxyjy/algorithm/blob/main/search/2d-array/index.ts)
 2. [《旋转数组输出最小数》](https://github.com/lmxyjy/algorithm/blob/main/search/rotate/index.ts)
 
+## 广度优先遍历
+1. [《从上到下打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs/index.ts)
+
+<!-- ## 深度优先遍历 -->
+
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
 2. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/heap/k/index.ts)
