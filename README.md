@@ -24,6 +24,7 @@
 4. [《力扣_员工的重要性》](https://github.com/lmxyjy/algorithm/blob/main/BFS/employee/index.ts)
 5. [《力扣_岛屿数量》](https://github.com/lmxyjy/algorithm/blob/main/BFS/island/index.ts)
 6. [《力扣_两颗相同的树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/the-same-tree/index.ts)
+7. [《力扣_对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/symmetric/index.ts)
 <!-- ## 深度优先遍历 -->
 
 ## 堆
