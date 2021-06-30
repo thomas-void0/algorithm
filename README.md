@@ -22,6 +22,7 @@
 2. [《逐层打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs2/index.ts)
 3. [《之字形打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs3/index.ts)
 4. [《力扣_员工的重要性》](https://github.com/lmxyjy/algorithm/blob/main/BFS/employee/index.ts)
+5. [《力扣_岛屿数量》](https://github.com/lmxyjy/algorithm/blob/main/BFS/island/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
