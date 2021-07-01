@@ -26,6 +26,7 @@
 6. [《力扣_两颗相同的树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/the-same-tree/index.ts)
 7. [《力扣_对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/symmetric/index.ts)
 8. [《力扣_层序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal/index.ts)
+9. [《力扣_层序遍历二叉树II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal-II/index.ts)
 <!-- ## 深度优先遍历 -->
 
 ## 堆
