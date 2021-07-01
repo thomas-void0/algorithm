@@ -80,6 +80,7 @@ namespace connect{
         },
         next:null
     }
+    //关键是找到每一层的节点，层与层的节点间进行链接
     function connect(root: Node | null): Node | null {
         if (root) {
             //创建一个队列

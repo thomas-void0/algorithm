@@ -30,6 +30,7 @@
 10. [《力扣_二叉树最小深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/min-depth/index.ts)
 11. [《力扣_二叉树最大深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/max-depth/index.ts)
 12. [《力扣_填充每个节点的下一个右侧节点指针》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect/index.ts)
+12. [《力扣_填充每个节点的下一个右侧节点指针II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect-II/index.ts)
     
 <!-- ## 深度优先遍历 -->
 
