@@ -23,17 +23,18 @@
 3. [《之字形打印二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/binary-bfs3/index.ts)
 4. [《员工的重要性》](https://github.com/lmxyjy/algorithm/blob/main/BFS/employee/index.ts)
 5. [《岛屿数量》](https://github.com/lmxyjy/algorithm/blob/main/BFS/island/index.ts)
-6. [《两颗相同的树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/the-same-tree/index.ts)
-7. [《对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/symmetric/index.ts)
-8. [《层序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal/index.ts)
-9. [《层序遍历二叉树II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal-II/index.ts)
-10. [《二叉树最小深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/min-depth/index.ts)
-11. [《二叉树最大深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/max-depth/index.ts)
-12. [《填充每个节点的下一个右侧节点指针》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect/index.ts)
-12. [《填充每个节点的下一个右侧节点指针II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect-II/index.ts)
-13. [《N叉树的层序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BFS/levelOrder/index.ts)
-14. [《二叉树的堂兄弟节点》](https://github.com/lmxyjy/algorithm/blob/main/BFS/isCousins/index.ts)
-    
+6. [《岛屿的最大面积》](https://github.com/lmxyjy/algorithm/blob/main/BFS/area/index.ts)
+7. [《两颗相同的树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/the-same-tree/index.ts)
+8. [《对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/symmetric/index.ts)
+9. [《层序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal/index.ts)
+10. [《层序遍历二叉树II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sequence-traversal-II/index.ts)
+11. [《二叉树最小深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/min-depth/index.ts)
+12. [《二叉树最大深度》](https://github.com/lmxyjy/algorithm/blob/main/BFS/max-depth/index.ts)
+13. [《填充每个节点的下一个右侧节点指针》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect/index.ts)
+14. [《填充每个节点的下一个右侧节点指针II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect-II/index.ts)
+15. [《N叉树的层序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BFS/levelOrder/index.ts)
+16. [《二叉树的堂兄弟节点》](https://github.com/lmxyjy/algorithm/blob/main/BFS/isCousins/index.ts)
+
 <!-- ## 深度优先遍历 -->
 
 ## 堆
