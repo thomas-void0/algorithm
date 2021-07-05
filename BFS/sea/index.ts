@@ -1,230 +1,133 @@
 //太平洋，大西洋水流问题
 /**
- * [
- * [1,2,2,3,5],
- * [3,2,3,4,4],
- * [2,4,5,3,1],
- * [6,7,1,4,5],
- * [5,1,1,2,4]
- * ]
+ * @see https://leetcode-cn.com/problems/pacific-atlantic-water-flow/
+给定一个 m x n 的非负整数矩阵来表示一片大陆上各个单元格的高度。“太平洋”处于大陆的左边界和上边界，而“大西洋”处于大陆的右边界和下边界。
+
+规定水流只能按照上、下、左、右四个方向流动，且只能从高到低或者在同等高度上流动。
+
+请找出那些水流既可以流动到“太平洋”，又能流动到“大西洋”的陆地单元的坐标。
+
+提示：
+
+输出坐标的顺序不重要
+m 和 n 都小于150
+
+示例：
+
+给定下面的 5x5 矩阵:
+
+  太平洋 ~   ~   ~   ~   ~ 
+       ~  1   2   2   3  (5) *
+       ~  3   2   3  (4) (4) *
+       ~  2   4  (5)  3   1  *
+       ~ (6) (7)  1   4   5  *
+       ~ (5)  1   1   2   4  *
+          *   *   *   *   * 大西洋
+
+返回:
+
+[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (上图中带括号的单元).
+
+ * 解题思路：@see https://leetcode-cn.com/problems/pacific-atlantic-water-flow/solution/shui-wang-gao-chu-liu-by-xiaohu9527-xxsx/
+ * 重点是：找出太平洋的水能流动到的地方，以及大西洋的水能流动到的地方。找到2者之间的交汇点，那么这些点的坐标就是满足条件的
+ * 
+ * 对于一个点它能流动两边的大洋，那么反过来，两边大洋的水反着流就能达到这个点。
+ * 尽然水开始倒流了，那么逻辑也需要反过来，因此只有将下一个点比当前的点大时或者等于当前点的高度时，水才能流过去。
  */
 namespace pacificAtlantic {
-    // function pacificAtlantic(heights: number[][]): number[][] {
-    //     //找到坐标右上角坐标，以及左下角坐标
-    //     const m = heights.length
-    //     const n = heights[0].length
-    //     let _y = m - 1 //一维数组坐标
-    //     let _x = n - 1 //一维数组值的坐标
-    //     const result: number[][] = [[0, _x], [_y, 0]]
-
-    //     for (let i = 0; i < m; i++){
-    //         for (let j = 0; j < n; j++){
-    //             //左下角和右上角的坐标无须处理
-    //             if ((i === 0 && j === _x) || (i === _y && j === 0)) continue
-    //             if (i === 1 && j === 3) {
-    //                 console.log("节点")
-    //             }
-    //             //进行上下左右对比
-    //             const currnetValue = heights[i][j]
-    //             const isLTrue = leftIsTrue(j, i, currnetValue)
-    //             const isRTrue = rightIsTrue(j, i, currnetValue)
-    //             const isTTrue = topIsTrue(j, i, currnetValue) 
-    //             const isBTrue = bottomIsTrue(j, i, currnetValue)
-    //             //通路的情况:左右 、 上下 、 左下、 右上
-    //             const isTrue = (isLTrue && isRTrue) || (isTTrue && isBTrue) || (isLTrue && isBTrue) || (isRTrue && isTTrue)
-    //             if (i === 1 && j === 3) {
-    //                 console.log("节点is:", isTrue, currnetValue)
-    //                 console.log(isLTrue)
-    //                 console.log(isRTrue)
-    //                 console.log(isTTrue)
-    //                 console.log(isBTrue)
-    //             }
-    //             isTrue && result.push([i, j])
-    //             //处理右上的特殊情况
-
-    //         }
-    //     }
-
-    //     function bfs(x:number,y:number[]) {
-
-    //     }
-
-    //     //判断左边
-    //     function leftIsTrue(x: number, y: number, initValue: number) {
-
-    //         let prev = initValue
-    //         for (let i = x - 1; i >= 0; i--){
-    //             if (heights[y][i] <= prev) {
-    //                 prev = heights[y][i]
-    //             } else {
-    //                 return false
-    //             }
-    //         }
-
-    //         return true
-    //     }
-
-    //     //判断右边
-    //     function rightIsTrue(x: number, y: number, initValue: number) {
-
-    //         let prev = initValue
-    //         for (let i = x + 1; i < n; i++){
-    //             if (heights[y][i] <= prev) {
-    //                 prev = heights[y][i]
-    //             } else {
-    //                 return false
-    //             }
-    //         }
-    //         return true
-    //     }
-
-    //     //判断下边
-    //     function bottomIsTrue(x: number, y: number, initValue: number) {
-    //         let prev = initValue
-    //         for (let i = y + 1; i < n; i++){
-    //             if (heights[i][x] <= prev) {
-    //                 prev = heights[i][x]
-    //             } else {
-    //                 return false
-    //             }
-    //         }
-
-    //         return true
-    //     }
-
-    //     //判断上边
-    //     function topIsTrue(x: number, y: number, initValue: number) {
-
-    //         let prev = initValue
-    //         for (let i = y - 1; i >= 0; i--){
-    //             if (heights[i][x] <= prev) {
-    //                 prev = heights[i][x]
-    //             } else {
-    //                 return false
-    //             }
-    //         }
-
-    //         return true
-
-    //     }
-
-    //     return result
-    // };
-
-    // const list = [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
-    // console.log("result:",pacificAtlantic(list))
-
     function pacificAtlantic(heights: number[][]): number[][] {
-        if (!heights || !heights[0]) return []
+        const m = heights.length
+        const n = heights[0].length
+        const result: number[][] = []
 
-        const m = heights.length //一维数组的个数
-        const n = heights[0].length //一维数组值的个数
+        //创建2个二维数组来分别记录，太平洋和大西洋的水可以流过的节点
+        const pacific = Array.from({ length: m }, () => new Array(n).fill(-1))
+        const atlantic = Array.from({ length: m }, () => new Array(n).fill(0))
 
-        //创建2个长度和宽度都增加10的二维数组
-        const flag = Array.from({ length: m + 10 }, () => new Array(n + 10).fill(0))
-        const flag2 = Array.from({ length: m + 10 }, () => new Array(n + 10).fill(0))
+        //遍历获取太平洋出发，水能流到的节点，太平洋的边为 [x = 0, y = n - 1]; [x = m - 1,y = 0],[0,0]这三点构成的线段
+        for (let x = 0; x < m; x++) pacificBfs(x, 0);
+        for (let y = 0; y < n; y++) pacificBfs(0, y);
 
-        console.log(flag)
-        console.log(flag2)
+        //遍历获取大西洋出发，水能流到的节点，大西洋的边为 [x = m - 1,y = 0];[x = m - 1,y = n - 1],[x = 0, y = n - 1]这三点构成的线段
+        for (let x = 0; x < m; x++) atlanticBfs(x, n - 1);
+        for (let y = 0; y < n; y++) atlanticBfs(m - 1, y);
 
-        const bfs = (x: number, y: number) => {
+        // //x：一维数组的索引值
+        // //y：一维数组中值的索引值
+        // //遍历查找太平洋比当前节点大的节点，每消费一个节点那么就将此节点设置为消费.
+        function pacificBfs(x: number, y: number) {
             const queue = [[x, y]]
-            flag[x][y] = 1
             while (queue.length) {
-                const [cx, cy] = queue.shift()!
-                flag[cx][cy] = 1 //此坐标标记为访问
+                const [x, y] = queue.shift()!
+                const current = heights[x][y]
+                pacific[x][y] = 1 //访问过的节点置为已经访问
 
-                const num = heights[cx][cy] //在二维数组中对应坐标的值
+                //查找上下左右4个点，比当前节点大就继续。
+                const minSafeNumber = Number.MIN_SAFE_INTEGER
+                const top = y - 1 >= 0 ? heights[x][y - 1] : minSafeNumber
+                const bottom = y + 1 < n ? heights[x][y + 1] : minSafeNumber
+                const left = x - 1 >= 0 ? heights[x - 1][y] : minSafeNumber
+                const right = x + 1 < m ? heights[x + 1][y] : minSafeNumber
 
-                var top = cx - 1 >= 0 ? heights[cx - 1][cy] : -1
-                var bottom = cx + 1 < m ? heights[cx + 1][cy] : -1
-                var left = cy - 1 >= 0 ? heights[cx][cy - 1] : -1
-                var right = cy + 1 < n ? heights[cx][cy + 1] : -1
-
-                //该坐标上边的值比它大同时在创建的二维数组中，此坐标没有被标记过
-                if (top >= num && flag[cx - 1][cy] == 0) {
-                    flag[cx - 1][cy] = 1 //此坐标标记为1
-                    queue.push([cx - 1, cy])
+                //如果此坐标没有被标记过，同时大于当前节点。那么说明水可以流向此处。加入到队列中，进行下一次查找
+                if (top >= current && pacific[x][y - 1] !== 1) {
+                    queue.push([x, y - 1]);
+                    pacific[x][y - 1] = 1
                 }
-                if (bottom >= num && flag[cx + 1][cy] == 0) {
-                    flag[cx + 1][cy] = 1
-                    queue.push([cx + 1, cy])
+                if (bottom >= current && pacific[x][y + 1] !== 1) {
+                    queue.push([x, y + 1]);
+                    pacific[x][y + 1] = 1
                 }
-                if (left >= num && flag[cx][cy - 1] == 0) {
-                    flag[cx][cy - 1] = 1
-                    queue.push([cx, cy - 1])
+                if (left >= current && pacific[x - 1][y] !== 1) {
+                    queue.push([x - 1, y]);
+                    pacific[x - 1][y] = 1
                 }
-                if (right >= num && flag[cx][cy + 1] == 0) {
-                    flag[cx][cy + 1] = 1
-                    queue.push([cx, cy + 1])
+                if (right >= current && pacific[x + 1][y] !== 1) {
+                    queue.push([x + 1, y]);
+                    pacific[x + 1][y] = 1
                 }
             }
-
-
         }
 
-        const bfs2 = (x: number, y: number) => {
+        //同上，遍历查找大西洋
+        function atlanticBfs(x: number, y: number) {
             const queue = [[x, y]]
-            flag2[x][y] = 1
             while (queue.length) {
-                const c = queue.shift()!
-                var cx = c[0]
-                var cy = c[1]
-                flag2[cx][cy] = 1
+                const [x, y] = queue.shift()!
+                const current = heights[x][y]
+                atlantic[x][y] = 1 //访问过的节点置为已经访问
 
-                const num = heights[cx][cy]
-                var top = cx - 1 >= 0 ? heights[cx - 1][cy] : -1
-                var bottom = cx + 1 < m ? heights[cx + 1][cy] : -1
-                var left = cy - 1 >= 0 ? heights[cx][cy - 1] : -1
-                var right = cy + 1 < n ? heights[cx][cy + 1] : -1
-                if (top >= num && flag2[cx - 1][cy] == 0) {
-                    flag2[cx - 1][cy] = 1
-                    queue.push([cx - 1, cy])
+                //查找上下左右4个点，比当前节点大就继续。
+                const minSafeNumber = Number.MIN_SAFE_INTEGER
+                const top = y - 1 >= 0 ? heights[x][y - 1] : minSafeNumber
+                const bottom = y + 1 < n ? heights[x][y + 1] : minSafeNumber
+                const left = x - 1 >= 0 ? heights[x - 1][y] : minSafeNumber
+                const right = x + 1 < m ? heights[x + 1][y] : minSafeNumber
+
+                //如果此坐标没有被标记过，同时大于当前节点。那么说明水可以流向此处。加入到队列中，进行下一次查找
+                if (top >= current && atlantic[x][y - 1] !== 1) {
+                    queue.push([x, y - 1]);
+                    atlantic[x][y - 1] = 1
                 }
-                if (bottom >= num && flag2[cx + 1][cy] == 0) {
-                    flag2[cx + 1][cy] = 1
-                    queue.push([cx + 1, cy])
-
+                if (bottom >= current && atlantic[x][y + 1] !== 1) {
+                    queue.push([x, y + 1]);
+                    atlantic[x][y + 1] = 1
                 }
-                if (left >= num && flag2[cx][cy - 1] == 0) {
-                    flag2[cx][cy - 1] = 1
-                    queue.push([cx, cy - 1])
-
+                if (left >= current && atlantic[x - 1][y] !== 1) {
+                    queue.push([x - 1, y]);
+                    atlantic[x - 1][y] = 1
                 }
-                if (right >= num && flag2[cx][cy + 1] == 0) {
-                    flag2[cx][cy + 1] = 1
-                    queue.push([cx, cy + 1])
-
+                if (right >= current && atlantic[x + 1][y] !== 1) {
+                    queue.push([x + 1, y]);
+                    atlantic[x + 1][y] = 1
                 }
             }
-
-
         }
 
-        //从左到右
-        for (let i = 0; i < n; i++) {
-            bfs(0, i)
-        }
-        //从上到下
-        for (let i = 0; i < m; i++) {
-            bfs(i, 0)
-        }
-
-        //从左到右
-        for (let i = 0; i < m; i++) {
-            bfs2(i, n - 1)
-        }
-        //从上到下
-        for (let i = 0; i < n; i++) {
-            bfs2(m - 1, i)
-        }
-
-        const result = []
+        //遍历二维数组,求取二维数组中太平洋和大西洋想交叉的点的坐标。即可取得结果
         for (let i = 0; i < m; i++) {
             for (let j = 0; j < n; j++) {
-                if (flag[i][j] + flag2[i][j] === 2) {
-                    result.push([i, j])
-                }
+                pacific[i][j] === atlantic[i][j] && result.push([i, j])
             }
         }
 
@@ -232,7 +135,9 @@ namespace pacificAtlantic {
     };
 
     const list = [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
-    console.log("result:", pacificAtlantic(list))
+    const list2 = [[10, 10, 10], [10, 1, 10], [10, 10, 10]]
+    console.log("result1:", pacificAtlantic(list))
+    console.log("result2:", pacificAtlantic(list2))
 }
 
 

@@ -34,6 +34,7 @@
 14. [《填充每个节点的下一个右侧节点指针II》](https://github.com/lmxyjy/algorithm/blob/main/BFS/connect-II/index.ts)
 15. [《N叉树的层序遍历》](https://github.com/lmxyjy/algorithm/blob/main/BFS/levelOrder/index.ts)
 16. [《二叉树的堂兄弟节点》](https://github.com/lmxyjy/algorithm/blob/main/BFS/isCousins/index.ts)
+17. [《太平洋大西洋水流问题》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sea/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
