@@ -39,6 +39,7 @@
 19. [《最短的桥》](https://github.com/lmxyjy/algorithm/blob/main/BFS/bridge/index.ts)
 20. [《扫雷》](https://github.com/lmxyjy/algorithm/blob/main/BFS/mines/index.ts)
 21. [《飞地的数量》](https://github.com/lmxyjy/algorithm/blob/main/BFS/move/index.ts)
+22. [《统计封闭岛屿的数目》](https://github.com/lmxyjy/algorithm/blob/main/BFS/closed-islands/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
