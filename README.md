@@ -36,6 +36,7 @@
 16. [《二叉树的堂兄弟节点》](https://github.com/lmxyjy/algorithm/blob/main/BFS/isCousins/index.ts)
 17. [《太平洋大西洋水流问题》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sea/index.ts)
 18. [《被围绕的区域》](https://github.com/lmxyjy/algorithm/blob/main/BFS/solve/index.ts)
+19. [《最短的桥》](https://github.com/lmxyjy/algorithm/blob/main/BFS/bridge/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
