@@ -37,6 +37,7 @@
 17. [《太平洋大西洋水流问题》](https://github.com/lmxyjy/algorithm/blob/main/BFS/sea/index.ts)
 18. [《被围绕的区域》](https://github.com/lmxyjy/algorithm/blob/main/BFS/solve/index.ts)
 19. [《最短的桥》](https://github.com/lmxyjy/algorithm/blob/main/BFS/bridge/index.ts)
+20. [《扫雷》](https://github.com/lmxyjy/algorithm/blob/main/BFS/mines/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
