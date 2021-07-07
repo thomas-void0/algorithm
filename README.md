@@ -42,6 +42,7 @@
 22. [《统计封闭岛屿的数目》](https://github.com/lmxyjy/algorithm/blob/main/BFS/closed-islands/index.ts)
 23. [《边框着色》](https://github.com/lmxyjy/algorithm/blob/main/BFS/border/index.ts)
 24. [《图像渲染》](https://github.com/lmxyjy/algorithm/blob/main/BFS/imageColor/index.ts)
+25. [《机器人的运动范围》](https://github.com/lmxyjy/algorithm/blob/main/BFS/moving-count/index.ts)
 
 <!-- ## 深度优先遍历 -->
 
