@@ -1,3 +1,6 @@
+/**
+ * @see https://leetcode-cn.com/problems/snakes-and-ladders/solution/bfs-by-sc8816-joyt/
+ */
 namespace snakesAndLadders {
     function snakesAndLadders(board: number[][]): number {
         const len = board.length //矩阵大小
