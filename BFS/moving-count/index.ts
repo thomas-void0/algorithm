@@ -1,3 +1,7 @@
+/**
+ * @see https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/
+ * 机器人的运动范围
+ */
 namespace movingCount {
     function movingCount(m: number, n: number, k: number): number {
         let num = 0
