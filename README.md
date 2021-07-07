@@ -44,7 +44,8 @@
 24. [《图像渲染》](https://github.com/lmxyjy/algorithm/blob/main/BFS/imageColor/index.ts)
 25. [《机器人的运动范围》](https://github.com/lmxyjy/algorithm/blob/main/BFS/moving-count/index.ts)
 
-<!-- ## 深度优先遍历 -->
+## 深度优先遍历
+1. [《二叉树最大深度》](https://github.com/lmxyjy/algorithm/blob/main/DFS/max-depth/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
