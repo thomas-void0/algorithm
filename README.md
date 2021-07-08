@@ -48,6 +48,7 @@
 1. [《二叉树最大深度》](https://github.com/lmxyjy/algorithm/blob/main/DFS/max-depth/index.ts)
 2. [《二叉树最小深度》](https://github.com/lmxyjy/algorithm/blob/main/DFS/min-depth/index.ts)
 3. [《路径总和》](https://github.com/lmxyjy/algorithm/blob/main/DFS/path/index.ts)
+3. [《翻转二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/invert-tree/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
