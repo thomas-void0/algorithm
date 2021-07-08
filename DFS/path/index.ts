@@ -31,5 +31,35 @@ namespace hasPathSum {
     };
 
     //bfs 的写法
+    //从左子树开始遍历，使用一个数组记录每条路径的val。如果最终能在这个数组中找到对应的值那么就返回true
+    function hasPathSum2(root: TreeNode | null, targetSum: number): boolean {
+        if (root === null) return false
 
+        const queue = [root]
+        const result = [root.val] //保留当前节点到根节点的路径值
+
+        while (queue.length) {
+            const { left, right } = queue.shift()!
+            const pathVal = result.shift()!
+
+            //此路径走完了，对比是否满足要求
+            if (left === null && right === null && pathVal === targetSum) return true;
+
+            //继续添加左节点
+            if (left) {
+                queue.push(left)
+                result.push(left.val + pathVal)
+            }
+
+            //继续添加右节点
+            if (right) {
+                queue.push(right)
+                result.push(right.val + pathVal)
+            }
+
+        }
+
+        return false
+
+    }
 }
