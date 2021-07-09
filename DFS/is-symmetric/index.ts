@@ -18,16 +18,17 @@ namespace isSymmetric {
 
     //分别设置2个指针，遍历比较不同位置的值
     function check(p: TreeNode | null, q: TreeNode | null): boolean {
+        //如果遍历到最后都为null了，那么直接返回true。说明之前递归的节点都满足要求
         if (p === null && q === null) return true
-        //其中一者为null的情况
+        //如果只有其中一个为null，那么肯定不满足要求
         if (p === null || q === null) return false
 
-        //如果两者值相等的情况下
-        if (p.val === q.val) {
-            //分别判断2两边是否相等
+        //如果当前值相等，那么继续比较下一轮
+        if (q.val === p.val) {
             return check(p.left, q.right) && check(p.right, q.left)
         }
 
+        //如果值不想等，那么直接返回false
         return false
 
     }
