@@ -51,6 +51,7 @@
 4. [《翻转二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/invert-tree/index.ts)
 5. [《相同的树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/is-same-tree/index.ts)
 6. [《对称二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/is-symmetric/index.ts)
+7. [《路径总和》](https://github.com/lmxyjy/algorithm/blob/main/DFS/sum-numbers/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
