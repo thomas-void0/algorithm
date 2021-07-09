@@ -15,7 +15,7 @@ namespace invertTree {
         }
     }
 
-    //翻转二叉树，只要有左右节点，那么就交换左右节点的位置。使用深度遍历的方式，先找到叶子节点，然后往上一层
+    //翻转二叉树，只要有左右节点，那么就交换左右节点的位置。使用深度遍历的方式
     function invertTree(root: TreeNode | null): TreeNode | null {
 
         if (root) {
@@ -30,4 +30,23 @@ namespace invertTree {
 
         return root
     };
+
+    //bfs广度优先遍历
+    function bfsInvertTree(root: TreeNode | null): TreeNode | null {
+
+        if (root) {
+            const queue = [root]
+            while (queue.length) {
+                const current = queue.shift()!
+                const temp = current.left
+                current.left = current.right
+                current.right = temp
+
+                current.left && queue.push(current.left)
+                current.right && queue.push(current.right)
+            }
+        }
+        return root
+
+    }
 }
