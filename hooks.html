@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //发布订阅
+        function useState(value) {
+            const gatter = () => value
+            const setter = (newValue) => value = newValue
+
+            return [gatter, setter]
+        }
+
+        //创建一个useEffect实现自动更新
+        function useEffect(callback) {
+
+        }
+
+        const [getCount, setCount] = useState(10)
+
+        useEffect(() => {
+            document.title = getCount()
+        })
+
+        useEffect(() => {
+            console.log("run useEffect")
+        })
+    </script>
+</body>
+
+</html>
