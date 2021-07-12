@@ -54,6 +54,7 @@
 7. [《路径总和》](https://github.com/lmxyjy/algorithm/blob/main/DFS/sum-numbers/index.ts)
 8. [《从前序与中序遍历序列构造二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/build-tree/index.ts)
 9. [《从中序与后序遍历序列构造二叉》](https://github.com/lmxyjy/algorithm/blob/main/DFS/build-tree2/index.ts)
+10. [《前序遍历构造二叉搜索树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/bst-from-preorder/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
