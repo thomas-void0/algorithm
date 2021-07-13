@@ -1,4 +1,3 @@
-
 declare class TreeNode {
     val: number
     left: TreeNode | null
@@ -8,4 +7,13 @@ declare class TreeNode {
         this.left = (left === undefined ? null : left)
         this.right = (right === undefined ? null : right)
     }
+}
+
+declare interface Node {
+    val: number
+    children: Node[]
+    constructor(val?: number) {
+    this.val = (val === undefined ? 0 : val)
+    this.children = []
+}
 }

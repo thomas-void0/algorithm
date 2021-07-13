@@ -58,6 +58,7 @@
 11. [《迭代前序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/preorder-by-stack/index.ts)
 12. [《迭代中序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/inorder-traversal/index.ts)
 13. [《迭代后序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/postorder-traversal/index.ts)
+14. [《N叉树的前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/preorder-n/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
