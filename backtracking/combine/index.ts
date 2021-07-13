@@ -14,9 +14,10 @@ function combine(n: number, k: number): number[][] {
             result.push([...path])
             return
         }
-
+        //减枝操作
+        const len = n - (k - path.length) + 1
         //遍历
-        for (let i = startIndex; i <= n; i++) {
+        for (let i = startIndex; i <= len; i++) {
             path.push(i)
             //递归下一层
             backtracking(i + 1)
