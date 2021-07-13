@@ -63,6 +63,7 @@
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
+2. [《组合总和 III》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum3/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
