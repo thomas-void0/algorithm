@@ -61,6 +61,9 @@
 14. [《N叉树的前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/preorder-n/index.ts)
 15. [《N叉树的后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/postorder-n/index.ts)
 
+## 回溯算法
+1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
+
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
 2. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/heap/k/index.ts)
