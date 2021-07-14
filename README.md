@@ -64,7 +64,9 @@
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
 2. [《组合总和 III》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum3/index.ts)
+3. [《电话号码的字母组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/letter-combinations/index.ts)
 
+combination-sum3/
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
 2. [《求解最小的k个数》](https://github.com/lmxyjy/algorithm/blob/main/heap/k/index.ts)

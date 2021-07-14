@@ -8,7 +8,7 @@ const result: string[][] = []
 function solveNQueens(n: number): string[][] {
     //创建一个棋盘
     const chessboard = Array.from({ length: n }, () => new Array(n).fill("."))
-    backtracing(0, chessboard, n)
+    backtracking(0, chessboard, n)
     return result
 };
 
@@ -33,7 +33,7 @@ function isValid(row: number, col: number, chessboard: string[][], n: number) {
 }
 
 //根据传入的棋盘进行处理
-function backtracing(row: number, chessboard: string[][], n: number) {
+function backtracking(row: number, chessboard: string[][], n: number) {
     //终止条件
     if (row === n) {
         return saveResult(chessboard)
@@ -44,7 +44,7 @@ function backtracing(row: number, chessboard: string[][], n: number) {
             //处理节点
             chessboard[row][col] = "Q"
             //递归调用下一行
-            backtracing(row + 1, chessboard, n)
+            backtracking(row + 1, chessboard, n)
             //回溯，撤销处理结果
             chessboard[row][col] = "."
         }
