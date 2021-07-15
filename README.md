@@ -68,6 +68,7 @@
 4. [《组合总和》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum/index.ts)
 5. [《组合总和 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum2/index.ts)
 6. [《分割回文串》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/partition/index.ts)
+7. [《复原 IP 地址》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/restore-ip-addresses/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
