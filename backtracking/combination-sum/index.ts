@@ -8,11 +8,10 @@ function combinationSum(candidates: number[], target: number): number[][] {
     const path: number[] = []
 
     function backtracking(candidates: number[], startIndex: number) {
-        if (sum > target) return;
         if (sum === target) return result.push([...path])
 
-        //遍历
-        for (let i = startIndex; i < candidates.length; i++) {
+        //遍历 + 剪枝
+        for (let i = startIndex; i < candidates.length && sum + candidates[i] <= target; i++) {
             const value = candidates[i]
             path.push(value)
             sum += value
