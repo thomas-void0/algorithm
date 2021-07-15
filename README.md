@@ -65,6 +65,7 @@
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
 2. [《组合总和 III》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum3/index.ts)
 3. [《电话号码的字母组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/letter-combinations/index.ts)
+4. [《组合总和》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combination-sum/index.ts)
 
 combination-sum3/
 ## 堆
