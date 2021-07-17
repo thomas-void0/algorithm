@@ -90,6 +90,7 @@
 ## 链表
 1. [《遍历链表》](https://github.com/lmxyjy/algorithm/blob/main/chainTable/map/index.ts)
 2. [《反转链表》](https://github.com/lmxyjy/algorithm/blob/main/chainTable/reverse/index.ts)
+3. [《两数相加》](https://github.com/lmxyjy/algorithm/blob/main/chainTable/sum/index.ts)
 
 ## 数组
 1. [《把数组排成最小的数》](https://github.com/lmxyjy/algorithm/blob/main/array/sort/index.ts)
