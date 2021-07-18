@@ -70,6 +70,7 @@
 6. [《分割回文串》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/partition/index.ts)
 7. [《复原 IP 地址》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/restore-ip-addresses/index.ts)
 8. [《子集》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets/index.ts)
+9. [《递增子序列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/find-subsequences/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
