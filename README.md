@@ -74,6 +74,7 @@
 10. [《全排列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/permute/index.ts)
 11. [《全排列 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/permute-unique/index.ts)
 12. [《N皇后》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/n-queen/index.ts)
+12. [《解数独》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/solve-sudoku/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
