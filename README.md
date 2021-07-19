@@ -71,6 +71,7 @@
 7. [《复原 IP 地址》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/restore-ip-addresses/index.ts)
 8. [《子集》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets/index.ts)
 9. [《递增子序列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/find-subsequences/index.ts)
+10. [《全排列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/permute/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
@@ -80,6 +81,7 @@
 1. [《二叉搜索树》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/binary-create/BST.ts)
 2. [《前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/pre-order/index.ts)
 3. [《中序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/middle-order/index.ts)
+
 4. [《后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/after-order/index.ts)
 5. [《根据前序遍历和中序遍历重建二叉树》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/rebuild/index.ts)
 6. [《根据前序遍历和中序遍历求解后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/get-after-order/index.ts)
