@@ -84,3 +84,43 @@
 
 //     backtracking(board)
 // };
+// function letterCombinations(digits: string): string[] {
+//     //1,创建映射数组
+//     const config = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
+//     //2,判断0，1的情况
+//     if (digits === "0" || digits === "1" || digits === "") return []
+
+//     const result: string[] = []
+//     const path: string[] = []
+
+//     //3，获取传入参数对应的字符数组
+//     const list = []
+//     for (let i = 0; i < digits.length; i++) {
+//         const key = digits[i]
+//         list.push(config[+key])
+//     }
+
+//     //4，进行组合
+//     function backtracking(startIndex: number, list: string[]) {
+//         //满足条件直接加入到结果
+//         if (path.length === digits.length) {
+//             result.push(path.join(""))
+//             return
+//         }
+//         const len = list[startIndex].length
+
+//         for (let i = 0; i < len; i++) {
+
+//             path.push(list[startIndex][i])
+
+//             //这里每一项执行的都是下一轮的数组，所以是startIndex + 1
+//             backtracking(startIndex + 1, list)
+
+//             path.pop()
+//         }
+//     }
+
+//     backtracking(0, list)
+
+//     return result
+// };
