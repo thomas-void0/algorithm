@@ -60,6 +60,7 @@
 13. [《迭代后序遍历二叉树》](https://github.com/lmxyjy/algorithm/blob/main/DFS/postorder-traversal/index.ts)
 14. [《N叉树的前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/preorder-n/index.ts)
 15. [《N叉树的后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/postorder-n/index.ts)
+16. [《括号生成》](https://github.com/lmxyjy/algorithm/blob/main/DFS/generate-parenthesis/index.ts)
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
