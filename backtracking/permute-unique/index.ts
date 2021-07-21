@@ -22,6 +22,7 @@ function permuteUnique(nums: number[]): number[][] {
             //树枝去重used[i - 1] = true
             if (i > 0 && list[i] === list[i - 1] && used[i - 1] === false) continue
 
+            //这里的目的是，去除同树枝被使用过的，因为每一轮的循环都是从0开始的。所以需要在这里判断，该索引值的是否已经被使用了
             if (used[i] === false) {
                 path.push(list[i])
                 used[i] = true
