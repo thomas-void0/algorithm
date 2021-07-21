@@ -125,7 +125,7 @@
 //     return result
 // };
 /**
- * 
+ *
 function permuteUnique(nums: number[]): number[][] {
     const result: number[][] = []
     const path: number[] = []
@@ -163,33 +163,104 @@ function permuteUnique(nums: number[]): number[][] {
 };
  */
 
-function test(nums: number[]): number[][] {
+// function test(nums: number[]): number[][] {
+//     const result: number[][] = []
+//     const path: number[] = []
+//     const used = new Array(nums.length).fill(false)
+
+//     function backtracking(list: number[]) {
+//         if (path.length === list.length) {
+//             result.push(path.slice())
+//             return
+//         }
+//         for (let i = 0; i < list.length; i++) {
+//             if (i > 0 && used[i - 1] === false && list[i] === list[i - 1]) {
+//                 continue
+//             }
+//             if (used[i] === false) {
+//                 path.push(list[i])
+//                 used[i] = true
+
+//                 backtracking(list)
+//                 used[i] = false
+//                 path.pop()
+//             }
+
+//         }
+//     }
+
+//     backtracking(nums.sort((a, b) => a - b))
+
+//     return result
+// }
+
+// function combinationSum(candidates: number[], target: number): number[][] {
+//     const result: number[][] = []
+//     const path: number[] = []
+//     let sum = 0
+
+//     function backtracking(list: number[], startIndex: number) {
+//         if (sum === target) {
+//             result.push(path.slice())
+//             return
+//         }
+
+//         //进行剪枝操作
+//         for (let i = startIndex; i < list.length && (sum + list[i] <= target); i++) {
+
+//             //统一树枝可以重复选取
+//             path.push(list[i])
+//             sum += list[i]
+    ·
+//             backtracking(list, i)
+//             path.pop()
+//             sum -= list[i]
+//         }
+//     }
+
+//     backtracking(candidates, 0)
+
+//     return result
+// }
+
+// function subsets(nums: number[]): number[][] {
+//     const result: number[][] = []
+//     const path: number[] = []
+
+//     function backtracking(startIndex: number, list: number[]) {
+//         result.push(path.slice())
+
+//         for (let i = startIndex; i < list.length; i++) {
+//             path.push(list[i])
+//             backtracking(i + 1, list)
+//             path.pop()
+//         }
+//     }
+
+//     backtracking(0, nums)
+//     return result
+// }
+/**
+ * 4，k
+ */
+function combine(n: number, k: number): number[][] {
     const result: number[][] = []
     const path: number[] = []
-    const used = new Array(nums.length).fill(false)
 
-    function backtracking(list: number[]) {
-        if (path.length === list.length) {
+    function backtracking(startIndex: number) {
+        if (path.length === k) {
             result.push(path.slice())
             return
         }
-        for (let i = 0; i < list.length; i++) {
-            if (i > 0 && used[i - 1] === false && list[i] === list[i - 1]) {
-                continue
-            }
-            if (used[i] === false) {
-                path.push(list[i])
-                used[i] = true
 
-                backtracking(list)
-                used[i] = false
-                path.pop()
-            }
-
+        for (let i = startIndex; i <= n; i++) {
+            path.push(i)
+            backtracking(i + 1)
+            path.pop()
         }
     }
 
-    backtracking(nums.sort((a, b) => a - b))
+    backtracking(1)
 
     return result
 }

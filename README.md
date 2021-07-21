@@ -77,6 +77,7 @@
 12. [《N皇后》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/n-queen/index.ts)
 13. [《解数独》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/solve-sudoku/index.ts)
 14. [《字母大小写全排列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/letter-case-permutation/index.ts)
+15. [《火柴拼正方形》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/makesquare/index.ts)
 
 
 ## 堆
