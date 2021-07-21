@@ -1,6 +1,8 @@
 /**
  * 火柴拼正方形
  * @see https://leetcode-cn.com/problems/matchsticks-to-square/
+ * 这道题的重点是，数组值的总和 / 4 = 每条边应该具有的长度
+ * 知道了每条边应该具有的长度后，创建一个边的容器，如果某一条边的长度<=当前传入的边。那么就加上这条边。否则就移动到下一条边进行判断。
  */
 function makesquare(matchsticks: number[]): boolean {
 

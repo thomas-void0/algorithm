@@ -243,24 +243,93 @@ function permuteUnique(nums: number[]): number[][] {
 /**
  * 4，k
  */
-function combine(n: number, k: number): number[][] {
+// function combine(n: number, k: number): number[][] {
+//     const result: number[][] = []
+//     const path: number[] = []
+
+//     function backtracking(startIndex: number) {
+//         if (path.length === k) {
+//             result.push(path.slice())
+//             return
+//         }
+
+//         for (let i = startIndex; i <= n; i++) {
+//             path.push(i)
+//             backtracking(i + 1)
+//             path.pop()
+//         }
+//     }
+
+//     backtracking(1)
+
+//     return result
+// }
+//candidates = [10,1,2,7,6,1,5], target = 8,
+// function combinationSum2(candidates: number[], target: number): number[][] {
+
+//     if (candidates.length === 0) return []
+
+//     candidates = candidates.sort((a, b) => a - b)
+
+//     const result: number[][] = []
+//     const path: number[] = []
+//     let sum = 0
+//     const len = candidates.length
+
+//     const used = new Array(candidates.length).fill(false)
+
+//     function backtracking(startIndex: number) {
+//         if (sum === target) {
+//             result.push(path.slice())
+//             return
+//         }
+
+//         for (let i = startIndex; i < len; i++) {
+
+//             //判断是否跳过
+//             if (sum + candidates[i] > target) continue
+//             if (i > 0 && candidates[i] === candidates[i - 1] && used[i - 1] === false) continue
+
+//             used[i] = true
+//             path.push(candidates[i])
+//             sum += candidates[i]
+
+//             backtracking(i + 1)
+
+//             used[i] = false
+//             path.pop()
+//             sum -= candidates[i]
+//         }
+//     }
+
+//     backtracking(0)
+
+//     return result
+// };
+
+function subsets(nums: number[]): number[][] {
+    if (nums.length === 0) return []
     const result: number[][] = []
     const path: number[] = []
 
     function backtracking(startIndex: number) {
-        if (path.length === k) {
-            result.push(path.slice())
-            return
-        }
 
-        for (let i = startIndex; i <= n; i++) {
-            path.push(i)
+        if (startIndex > nums.length) return
+
+        result.push(path.slice())
+
+        for (let i = startIndex; i < nums.length; i++) {
+            path.push(nums[i])
+
             backtracking(i + 1)
+
             path.pop()
         }
+
+
     }
 
-    backtracking(1)
+    backtracking(0)
 
     return result
-}
+};

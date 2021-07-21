@@ -78,6 +78,7 @@
 13. [《解数独》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/solve-sudoku/index.ts)
 14. [《字母大小写全排列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/letter-case-permutation/index.ts)
 15. [《火柴拼正方形》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/makesquare/index.ts)
+16. [《子集 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets-with-dup/index.ts)
 
 
 ## 堆
