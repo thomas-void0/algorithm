@@ -80,6 +80,7 @@
 15. [《火柴拼正方形》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/makesquare/index.ts)
 16. [《子集 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets-with-dup/index.ts)
 17. [《拆分字符串使唯一子字符串的数目最大》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/max-unique-split/index.ts)
+18. [《活字印刷》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/num-tile-possibilities/index.ts)
 
 
 ## 堆

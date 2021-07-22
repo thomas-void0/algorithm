@@ -12,7 +12,7 @@ function maxUniqueSplit(s: string): number {
     }
     //先切割一个，如果已经被使用了，那么就拼接下一个进行检测
     function dfs(startIndex: number) {
-
+        console.log("startIndex:", startIndex)
         if (startIndex === s.length) {
             result = Math.max(path.length, result)
             return
@@ -20,9 +20,12 @@ function maxUniqueSplit(s: string): number {
 
         for (let i = startIndex + 1; i <= s.length; i++) {
             const _s = s.substring(startIndex, i)
+            console.log("_s==>", _s)
             if (!isValid(path, _s)) {
+                console.log("添加:", _s)
                 path.push(_s)
                 dfs(i)
+                console.log("回溯:", _s)
                 path.pop()
             }
         }
@@ -33,3 +36,4 @@ function maxUniqueSplit(s: string): number {
 
     return result
 };
+maxUniqueSplit("abaccc")
