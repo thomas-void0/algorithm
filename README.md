@@ -79,6 +79,7 @@
 14. [《字母大小写全排列》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/letter-case-permutation/index.ts)
 15. [《火柴拼正方形》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/makesquare/index.ts)
 16. [《子集 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets-with-dup/index.ts)
+17. [《拆分字符串使唯一子字符串的数目最大》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/max-unique-split/index.ts)
 
 
 ## 堆
@@ -89,7 +90,6 @@
 1. [《二叉搜索树》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/binary-create/BST.ts)
 2. [《前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/pre-order/index.ts)
 3. [《中序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/middle-order/index.ts)
-
 4. [《后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/after-order/index.ts)
 5. [《根据前序遍历和中序遍历重建二叉树》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/rebuild/index.ts)
 6. [《根据前序遍历和中序遍历求解后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/binary-tree/get-after-order/index.ts)

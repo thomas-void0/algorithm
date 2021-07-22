@@ -307,29 +307,67 @@ function permuteUnique(nums: number[]): number[][] {
 //     return result
 // };
 
-function subsets(nums: number[]): number[][] {
-    if (nums.length === 0) return []
-    const result: number[][] = []
-    const path: number[] = []
+// function subsets(nums: number[]): number[][] {
+//     if (nums.length === 0) return []
+//     const result: number[][] = []
+//     const path: number[] = []
 
-    function backtracking(startIndex: number) {
+//     function backtracking(startIndex: number) {
 
-        if (startIndex > nums.length) return
+//         if (startIndex > nums.length) return
 
-        result.push(path.slice())
+//         result.push(path.slice())
 
-        for (let i = startIndex; i < nums.length; i++) {
-            path.push(nums[i])
+//         for (let i = startIndex; i < nums.length; i++) {
+//             path.push(nums[i])
 
-            backtracking(i + 1)
+//             backtracking(i + 1)
 
-            path.pop()
-        }
+//             path.pop()
+//         }
 
 
+//     }
+
+//     backtracking(0)
+
+//     return result
+// };
+class TreeNode {
+    val: number
+    left: TreeNode | null
+    right: TreeNode | null
+    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+        this.val = (val === undefined ? 0 : val)
+        this.left = (left === undefined ? null : left)
+        this.right = (right === undefined ? null : right)
+    }
+}
+function createTree(list: number[], root: TreeNode | null) {
+
+    if (root === null) {
+        root = new TreeNode()
     }
 
-    backtracking(0)
+    const queue = [...list]
+    const treeQueue = [root]
 
-    return result
-};
+    while (queue.length) {
+        const val = queue.shift()! // 1
+        const node = treeQueue.shift()! //root 
+        if (node && val) {
+            node.val = val
+        }
+
+        if (queue.length) {
+            node.left = new TreeNode()
+            node.right = new TreeNode()
+            treeQueue.push(node.left)
+            treeQueue.push(node.right)
+        }
+    }
+
+    return root
+}
+
+console.log("createTree==>", createTree([1, 2, 3, 4, 5], null))
