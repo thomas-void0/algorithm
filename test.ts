@@ -333,41 +333,89 @@ function permuteUnique(nums: number[]): number[][] {
 
 //     return result
 // };
-class TreeNode {
-    val: number
-    left: TreeNode | null
-    right: TreeNode | null
-    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-        this.val = (val === undefined ? 0 : val)
-        this.left = (left === undefined ? null : left)
-        this.right = (right === undefined ? null : right)
+// class TreeNode {
+//     val: number
+//     left: TreeNode | null
+//     right: TreeNode | null
+//     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+//         this.val = (val === undefined ? 0 : val)
+//         this.left = (left === undefined ? null : left)
+//         this.right = (right === undefined ? null : right)
+//     }
+// }
+// function createTree(list: number[], root: TreeNode | null) {
+
+//     if (root === null) {
+//         root = new TreeNode()
+//     }
+
+//     const queue = [...list]
+//     const treeQueue = [root]
+
+//     while (queue.length) {
+//         const val = queue.shift()! // 1
+//         const node = treeQueue.shift()! //root 
+//         if (node && val) {
+//             node.val = val
+//         }
+
+//         if (queue.length) {
+//             node.left = new TreeNode()
+//             node.right = new TreeNode()
+//             treeQueue.push(node.left)
+//             treeQueue.push(node.right)
+//         }
+//     }
+
+//     return root
+// }
+
+// console.log("createTree==>", createTree([1, 2, 3, 4, 5], null))
+/**
+ * 
+ * [
+ * [0,0,1,0,0,0,0,1,0,0,0,0,0],
+ * [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ * [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ * [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ * [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ * [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ * [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ * [0,0,0,0,0,0,0,1,1,0,0,0,0]
+ * ]
+ */
+
+function maxAreaOfIsland(grid: number[][]): number {
+    let num = 0
+    const m = grid.length
+    const n = grid[0].length
+    let result = 0
+
+    //去重，避免重复计数
+    const used: boolean[][] = Array.from({ length: m }, () => new Array(n).fill(false))
+
+    function bfs(y: number, x: number) {
+        //判断坐标是否满足要求
+        if (y < 0 || x < 0 || y >= m || x >= n || used[y][x]) return false
+        if (grid[y][x] === 0) return false
+
+        //如果是陆地
+        used[y][x] = true
+        num++
+
+        //查找这个点的其他方向
+        bfs(y - 1, x) || bfs(y + 1, x) || bfs(y, x - 1) || bfs(y, x + 1)
     }
-}
-function createTree(list: number[], root: TreeNode | null) {
 
-    if (root === null) {
-        root = new TreeNode()
-    }
-
-    const queue = [...list]
-    const treeQueue = [root]
-
-    while (queue.length) {
-        const val = queue.shift()! // 1
-        const node = treeQueue.shift()! //root 
-        if (node && val) {
-            node.val = val
+    for (let y = 0; y < m; y++) {
+        for (let x = 0; x < n; x++) {
+            if (grid[y][x] === 1 && used[y][x] === false) {
+                bfs(y, x)
+                result = Math.max(result, num)
+                num = 0//重置
+            }
         }
-
-        if (queue.length) {
-            node.left = new TreeNode()
-            node.right = new TreeNode()
-            treeQueue.push(node.left)
-            treeQueue.push(node.right)
-        }
     }
 
-    return root
-}
-
-console.log("createTree==>", createTree([1, 2, 3, 4, 5], null))
+    return result
+};
