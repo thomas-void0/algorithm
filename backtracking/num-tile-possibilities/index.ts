@@ -17,6 +17,7 @@ function numTilePossibilities(tiles: string): number {
             used[i] = true
             s += tiles[i]
             backtracking(s)
+
             s = s.slice(0, s.length - 1)
             used[i] = false
 

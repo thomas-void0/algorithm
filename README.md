@@ -61,6 +61,7 @@
 14. [《N叉树的前序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/preorder-n/index.ts)
 15. [《N叉树的后序遍历》](https://github.com/lmxyjy/algorithm/blob/main/DFS/postorder-n/index.ts)
 16. [《括号生成》](https://github.com/lmxyjy/algorithm/blob/main/DFS/generate-parenthesis/index.ts)
+17. [《单词搜索》](https://github.com/lmxyjy/algorithm/blob/main/DFS/exist/index.ts)
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
@@ -81,7 +82,6 @@
 16. [《子集 II》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/subsets-with-dup/index.ts)
 17. [《拆分字符串使唯一子字符串的数目最大》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/max-unique-split/index.ts)
 18. [《活字印刷》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/num-tile-possibilities/index.ts)
-
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
