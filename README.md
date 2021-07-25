@@ -65,6 +65,8 @@
 18. [《最大岛屿面积》](https://github.com/lmxyjy/algorithm/blob/main/DFS/max-area-of-Island/index.ts)
 19. [《被围绕的区域》](https://github.com/lmxyjy/algorithm/blob/main/DFS/solve/index.ts)
 20. [《岛屿数量》](https://github.com/lmxyjy/algorithm/blob/main/DFS/num-Islands/index.ts)
+21. [《太平洋大西洋水流问题》](https://github.com/lmxyjy/algorithm/blob/main/DFS/pacific-atlantic/index.ts)
+
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
