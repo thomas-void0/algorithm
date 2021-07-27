@@ -67,6 +67,7 @@
 20. [《岛屿数量》](https://github.com/lmxyjy/algorithm/blob/main/DFS/num-Islands/index.ts)
 21. [《太平洋大西洋水流问题》](https://github.com/lmxyjy/algorithm/blob/main/DFS/pacific-atlantic/index.ts)
 22. [《飞地的数量》](https://github.com/lmxyjy/algorithm/blob/main/DFS/num-enclaves/index.ts)
+23. [《统计封闭岛屿的数目》](https://github.com/lmxyjy/algorithm/blob/main/DFS/closed-Island/index.ts)
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
