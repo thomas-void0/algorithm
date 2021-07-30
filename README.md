@@ -69,6 +69,8 @@
 22. [《飞地的数量》](https://github.com/lmxyjy/algorithm/blob/main/DFS/num-enclaves/index.ts)
 23. [《统计封闭岛屿的数目》](https://github.com/lmxyjy/algorithm/blob/main/DFS/closed-Island/index.ts)
 24. [《边框着色》](https://github.com/lmxyjy/algorithm/blob/main/DFS/color-border/index.ts)
+25. [《机器人的运动范围》](https://github.com/lmxyjy/algorithm/blob/main/DFS/moving-count/index.ts)
+
 
 ## 回溯算法
 1. [《组合》](https://github.com/lmxyjy/algorithm/blob/main/backtracking/combine/index.ts)
