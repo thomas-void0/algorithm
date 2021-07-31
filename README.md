@@ -70,6 +70,7 @@
 23. [《统计封闭岛屿的数目》](https://github.com/lmxyjy/algorithm/blob/main/DFS/closed-Island/index.ts)
 24. [《边框着色》](https://github.com/lmxyjy/algorithm/blob/main/DFS/color-border/index.ts)
 25. [《机器人的运动范围》](https://github.com/lmxyjy/algorithm/blob/main/DFS/moving-count/index.ts)
+26. [《扫雷游戏》](https://github.com/lmxyjy/algorithm/blob/main/DFS/update-board/index.ts)
 
 
 ## 回溯算法
