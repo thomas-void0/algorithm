@@ -95,6 +95,7 @@
 
 ## 动态规划
 1. [《斐波那契数》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/fib/index.ts)
+2. [《爬楼梯》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/climb-stairs/index.ts)
 
 ## 堆
 1. [《堆》](https://github.com/lmxyjy/algorithm/blob/main/heap/heap-create/heap.ts)
