@@ -103,6 +103,7 @@
 1. [《斐波那契数》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/fib/index.ts)
 2. [《爬楼梯》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/climb-stairs/index.ts)
 3. [《最小花费爬楼梯》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/min-cost-climbing-stairs/index.ts)
+4. [《不同路径》](https://github.com/lmxyjy/algorithm/blob/main/DynamicProgramming/unique-paths/index.ts)
 
 ## 堆
 
