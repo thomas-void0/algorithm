@@ -9,7 +9,7 @@
 3. [《插入排序》](https://github.com/lmxyjy/algorithm/blob/main/sort/insertion-sort/index.ts)
 4. [《堆排序》](https://github.com/lmxyjy/algorithm/blob/main/sort/heap-sort/index.ts)
 5. [《归并排序》](https://github.com/lmxyjy/algorithm/blob/main/sort/merge-sort/index.ts)
-6. [《快速排序》](https://github.com/lmxyjy/algorithm/blob/main/sort/fast-sort/index.ts)
+<!-- 6. [《快速排序》](https://github.com/lmxyjy/algorithm/blob/main/sort/fast-sort/index.ts) -->
 
 ## 数学运算
 
