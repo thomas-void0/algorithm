@@ -1,22 +1,23 @@
 var sortArray = function (nums) {
-  if (nums.length <= 1) {
-    return nums;
-  }
-  const pivotIndex = Math.floor(nums.length / 2);
-  const pivot = nums.splice(pivotIndex, 1)[0]; // 基准元素
-  const left = [];
-  const right = [];
+  if (nums.length <= 1) return nums;
 
+  const povitIdx = Math.floor(nums.length / 2)
+  const povit = nums.splice(povitIdx, 1)[0]
+  const left = []
+  const right = []
+
+  // 进行分区
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] < pivot) {
-      left.push(nums[i]);
+    if (nums[i] <= povit) {
+      left.push(nums[i])
     } else {
-      right.push(nums[i]);
+      right.push(nums[i])
     }
   }
 
-  // 将3个数组拼接起来
-  return sortArray(left).concat([pivot], sortArray(right));
+  // 合并
+  return sortArray(left).concat(povit, sortArray(right))
+
 };
 
 // 空间复杂度更低的快速排序
