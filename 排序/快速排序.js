@@ -17,7 +17,6 @@ var sortArray = function (nums) {
 
   // 合并
   return sortArray(left).concat(povit, sortArray(right))
-
 };
 
 // 空间复杂度更低的快速排序
