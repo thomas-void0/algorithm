@@ -8,10 +8,7 @@ function mergeSort(arr) {
   const left = arr.slice(0, mid)
   const right = arr.slice(mid)
 
-  const mergeSortLeft = mergeSort(left)
-  const mergeSortRight = mergeSort(right)
-
-  return merge(mergeSortLeft, mergeSortRight)
+  return merge(mergeSort(left), mergeSort(right))
 }
 
 // 分治中的治
