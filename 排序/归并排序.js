@@ -1,17 +1,17 @@
 const arr = [1, 2, 0, 12, 5, 3]
-// 这个函数的功能是，分治中的分
-function mergeSort(arr) {
-  const len = arr.length
-  if (len < 2) return arr
+// 归并排序，和快速排序类似，就是使用分治的思想，先对数组进行拆分，然后对比左右进行合并
+function sortArray(nums) {
+  const len = nums.length;
+  if (len < 2) return nums;
 
-  const mid = len / 2
-  const left = arr.slice(0, mid)
-  const right = arr.slice(mid)
+  // 拆分数组
+  const middle = Math.floor(len / 2)
+  const left = nums.slice(0, middle)
+  const right = nums.slice(middle)
 
-  return merge(mergeSort(left), mergeSort(right))
+  return merge(sortArray(left), sortArray(right))
 }
 
-// 分治中的治
 function merge(left, right) {
   const result = []
 
